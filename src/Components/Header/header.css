@@ -394,6 +394,9 @@ align-items: center;
   .container-fluid{
     padding: 0px 0px !important;
   }
+  .icon{
+    display: flex;
+  }
   
   
   

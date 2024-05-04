@@ -55,6 +55,12 @@ const Header = () => {
                                     GitHub
                                 </NavLink>
                             </NavItem>
+                            <NavItem>
+                                
+                                <NavLink href="https://github.com/reactstrap/reactstrap">
+                                    GitHub
+                                </NavLink>
+                            </NavItem>
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
                                     Options
@@ -66,6 +72,17 @@ const Header = () => {
                                     <DropdownItem>Reset</DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledDropdown>
+                            <NavItem>
+                            <div className='input_search'>
+                                <input placeholder='Search...'></input>
+                                <img src={search}></img>
+                            </div>
+                            </NavItem>
+                            <NavItem className='icon'>
+                                <NavLink><img src={heard}></img></NavLink>
+                                <NavLink><img src={bag}></img><div className='number_cart'><p>2</p></div></NavLink>
+                                <NavLink><img src={user}></img></NavLink>
+                            </NavItem>
                         </Nav>
                     <NavbarToggler className='button_toggle' onClick={toggle} />
                     <Collapse isOpen={isOpen} navbar>
