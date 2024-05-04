@@ -41,123 +41,108 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-                
-                <div className='container'>
-                <div>
-                <Navbar >
-                    <NavbarBrand href="/"><div className='logo'><img src={logo}></img></div></NavbarBrand>
-                    <Nav className="me-auto" >
-                            <NavItem>
-                                <NavLink className='link' href="/components/">Components</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="https://github.com/reactstrap/reactstrap">
-                                    GitHub
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                
-                                <NavLink href="https://github.com/reactstrap/reactstrap">
-                                    GitHub
-                                </NavLink>
-                            </NavItem>
-                            <UncontrolledDropdown nav inNavbar>
-                                <DropdownToggle nav caret>
-                                    Options
-                                </DropdownToggle>
-                                <DropdownMenu right>
-                                    <DropdownItem>Option 1</DropdownItem>
-                                    <DropdownItem>Option 2</DropdownItem>
-                                    <DropdownItem divider />
-                                    <DropdownItem>Reset</DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                            <NavItem>
-                            <div className='input_search'>
-                                <input placeholder='Search...'></input>
-                                <img src={search}></img>
-                            </div>
-                            </NavItem>
-                            <NavItem className='icon'>
-                                <NavLink><img src={heard}></img></NavLink>
-                                <NavLink><img src={bag}></img><div className='number_cart'><p>2</p></div></NavLink>
-                                <NavLink><img src={user}></img></NavLink>
-                            </NavItem>
-                        </Nav>
-                    <NavbarToggler className='button_toggle' onClick={toggle} />
-                    <Collapse isOpen={isOpen} navbar>
-                        <Nav className="me-auto" navbar>
-                            <NavItem>
-                                <NavLink href="/components/">Components</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="https://github.com/reactstrap/reactstrap">
-                                    GitHub
-                                </NavLink>
-                            </NavItem>
-                            <UncontrolledDropdown nav inNavbar>
-                                <DropdownToggle nav caret>
-                                    Options
-                                </DropdownToggle>
-                                <DropdownMenu right>
-                                    <DropdownItem>Option 1</DropdownItem>
-                                    <DropdownItem>Option 2</DropdownItem>
-                                    <DropdownItem divider />
-                                    <DropdownItem>Reset</DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                        </Nav>
-                        <NavbarText>Simple Text</NavbarText>
-                    </Collapse>
-                </Navbar>
-            </div>
 
-                    <div className='Nav'>
-                        <div className='logo-menu'>
-                            <Button color="link" className='nav'><i class="fa-solid fa-bars-staggered"></i></Button>
-                            <div className='logo'><img src={logo}></img></div>
-                            <Button color="link" className='search'><img src={search1}></img></Button>
-                            <div className='menu'>
-                                <ul>
-                                    <Link><p>Home</p></Link>
-                                    <Link><p>Shop</p><i class="fa-solid fa-angle-down"></i></Link>
-                                    <Link><p>Products</p></Link>
-                                    <Link><p>Blog</p></Link>
-                                    <Link><p>Pages</p><i class="fa-solid fa-angle-down"></i></Link>
-                                </ul>
+                <div className='container'>
+                    <div>
+                        <Navbar >
+                            <div className='Brand_menu'>
+                                <Button className='bar'><i class="fa-solid fa-bars-staggered"></i></Button>
+                                <NavbarBrand href="/"><div className='logo'><img src={logo}></img></div></NavbarBrand>
+                                <Button className='bar_search'><img src={search1} /></Button>
+                                <Nav className="me-auto" >
+                                    <NavItem>
+                                        <NavLink href="/components/"><p>Home</p></NavLink>
+                                    </NavItem>
+
+                                    <UncontrolledDropdown nav inNavbar>
+                                        <DropdownToggle nav caret>
+                                            <p>Shop</p>
+                                            <i class="fa-solid fa-angle-down"></i>
+                                        </DropdownToggle>
+                                        <DropdownMenu right>
+                                            <DropdownItem>Option 1</DropdownItem>
+                                            <DropdownItem>Option 2</DropdownItem>
+                                            <DropdownItem divider />
+                                            <DropdownItem>Reset</DropdownItem>
+                                        </DropdownMenu>
+                                    </UncontrolledDropdown>
+                                    <NavItem>
+
+                                        <NavLink href="https://github.com/reactstrap/reactstrap">
+                                            <p>Products</p>
+                                        </NavLink>
+                                    </NavItem>
+                                    <NavItem>
+                                        <NavLink href="https://github.com/reactstrap/reactstrap">
+                                            <p>Blog</p>
+                                        </NavLink>
+                                    </NavItem>
+                                    <UncontrolledDropdown nav inNavbar>
+                                        <DropdownToggle nav caret>
+                                            <p>Pages</p>
+                                            <i class="fa-solid fa-angle-down"></i>
+                                        </DropdownToggle>
+                                        <DropdownMenu right>
+                                            <DropdownItem>Option 1</DropdownItem>
+                                            <DropdownItem>Option 2</DropdownItem>
+                                            <DropdownItem divider />
+                                            <DropdownItem>Reset</DropdownItem>
+                                        </DropdownMenu>
+                                    </UncontrolledDropdown>
+                                </Nav>
                             </div>
-                        </div>
-                        <div className='funtion_left'>
-                            <div className='input_search'>
-                                <input placeholder='Search...'></input>
-                                <img src={search}></img>
+                            <div className='header_funtion'>
+                                <div>
+                                    <div className='input_search'>
+                                        <input placeholder='Search...'></input>
+                                        <img src={search}></img>
+                                    </div>
+                                </div>
+                                <NavItem className='icon'>
+                                    <NavLink><img src={heard}></img></NavLink>
+                                    <NavLink><img src={bag}></img><div className='number_cart'><p>2</p></div></NavLink>
+                                    <NavLink><img src={user}></img></NavLink>
+                                </NavItem>
                             </div>
-                            <div className='icon'>
-                                <Link className='heard'><img src={heard}></img></Link>
-                                <Link className='bag'><img src={bag}></img><div className='number_cart'><p>2</p></div></Link>
-                                <Link><img src={user}></img></Link>
-                            </div>
-                        </div>
+
+
+
+
+                            <Collapse isOpen={isOpen} navbar>
+                                <Nav className="me-auto" navbar>
+                                    <NavItem>
+                                        <NavLink href="/components/">Components</NavLink>
+                                    </NavItem>
+                                    <NavItem>
+                                        <NavLink href="https://github.com/reactstrap/reactstrap">
+                                            GitHub
+                                        </NavLink>
+                                    </NavItem>
+                                    <UncontrolledDropdown nav inNavbar>
+                                        <DropdownToggle nav caret>
+                                            Options
+                                        </DropdownToggle>
+                                        <DropdownMenu right>
+                                            <DropdownItem>Option 1</DropdownItem>
+                                            <DropdownItem>Option 2</DropdownItem>
+                                            <DropdownItem divider />
+                                            <DropdownItem>Reset</DropdownItem>
+                                        </DropdownMenu>
+                                    </UncontrolledDropdown>
+                                </Nav>
+                                <NavbarText>Simple Text</NavbarText>
+                            </Collapse>
+                        </Navbar>
                     </div>
-                </div>
-
-            </div>
-            
-            <div className='nav_bar'>
-                <div className='container'>
-                    <ul className='list_menu'>
-                        <Link><p>Home</p></Link>
-                        <Link><p>Shop</p><i class="fa-solid fa-angle-down"></i></Link>
-                        <Link><p>Products</p></Link>
-                        <Link><p>Blog</p></Link>
-                        <Link className='page'><p>Pages</p><i class="fa-solid fa-angle-down"></i></Link>
-                    </ul>
 
 
                 </div>
+
             </div>
 
-        </div>
+
+
+        </div >
     );
 }
 
