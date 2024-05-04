@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 0px;
+    padding: 10px 0px;
 }
 .infor .infor_right{
     display: flex;
@@ -182,8 +182,218 @@ width: 18px;
 .header{
     background-color: #ffff;
     box-shadow: rgba(0, 0, 0, 0.20) 0px 2px 7px;
+    
 }
 .logo-menu .menu a p{
     font-size: 16px;
     margin: 0;
 } 
+.top_infor{
+    background-color: #FAFAFA;
+}
+::placeholder{
+    color: #ADB6C0;
+    font-size: 16px;
+    font-family: var(--font-family);
+    
+    
+}
+.logo-menu .menu a{
+    position: relative;
+}
+.logo-menu .menu a::after{
+position: absolute;
+height: 3px;
+background-color: #377E62;
+width: 0;
+left: 0;
+content: "";
+bottom: -8px;
+transition: 0.3s;
+}
+.logo-menu .menu a:hover::after{
+    width: 100%;
+}
+
+.infor .infor_left{
+    font-family: var(--font-family);
+    font-size: var(--fontsize-infor);
+}
+.langues p{
+    font-family: var(--font-family);
+    font-size: var(--fontsize-infor);
+    font-weight: var(--font-regular);
+}
+.logo-menu .menu ul p{
+    font-family: var(--font-family);
+    font-weight: var(--font-regular);
+    font-size:var(--fontsize-body1) ;
+}
+.nav_bar{
+    display: none;
+  }
+@media only screen and (max-width: 1400px) {
+    .Nav .menu{
+        display: flex;
+        transform: translateY(3px);
+        margin-left: 50px;
+       
+    }
+  }
+  @media only screen and (max-width: 1200px) {
+    .Nav .menu{
+        display: flex;
+        transform: translateY(3px);
+        margin-left: 50px;
+       
+    }
+    .funtion_left .input_search input{
+        border: none;
+        outline: none;
+        width: 200px;
+    }
+    .funtion_left .input_search{
+        width: 250px;
+    }
+    .Nav .menu ul {
+        padding: 0px;
+        margin: 0;
+        display: flex;
+        width: 350px;
+        justify-content: space-between;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .infor .infor_right {
+        display: none;
+        
+    }
+    .infor .infor_left {
+        font-family: var(--font-family);
+        font-size: 12px;
+        width: 100%;
+        text-align: center;
+    }
+    .funtion_left {
+        display: none;
+    }
+    .logo-menu .menu{
+        display: none;
+    }
+    .logo-menu .logo img{
+        width: 90px;
+    }
+    .logo-menu .nav{
+        display: block;
+        background:none;
+        color: none;
+        border: none;
+        outline: none;
+        height: 26px;
+      }
+      .logo-menu .nav:hover{
+        background: none;
+      }
+      .logo-menu .nav i{
+        color: #122940;
+        font-size: 24px;
+      }
+      
+      .logo-menu .search{
+        display: block;
+        background:none;
+        color: none;
+        border: none;
+        outline: none;
+        height: 26px;
+        
+      }
+      .logo-menu .search:hover{
+        background: none;
+      }
+      .logo-menu{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+      }
+      .logo-menu .search img{
+        width: 20px;
+        color: #122940;
+      }
+      .search img{
+        transform: translateY(-3px);
+        width: 22px;
+      }
+      .header{
+        background-color: #ffff;
+        box-shadow: none;
+        
+    }
+    .nav_bar{
+        background-color: #FAFAFA;
+        display: block;
+        overflow-y: auto;
+        height: 100vh;
+        overflow-x: hidden;
+        position: absolute;
+        width: 100%;
+        left: -110%;
+        
+    }
+    .nav_bar.active{
+        background-color: #FAFAFA;
+        display: block;
+        overflow-y: auto;
+        height: 100vh;
+        overflow-x: hidden;
+        position: absolute;
+        width: 100%;
+        left: 0%;
+        
+    }
+    .nav_bar .list_menu{
+        padding-left: 0px;
+    }
+    .list_menu a{
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        padding: 20px 0;
+        justify-content: space-between;
+        color: #122940;
+        border-bottom:1px #f0f0f0 solid  ;
+
+    }
+    .list_menu p{
+        margin-bottom: 0;
+        color: #122940;
+    }
+    .list_menu a:last-child{
+        border-bottom:none  ;
+    }
+  }
+  .logo-menu button{
+    display: none;
+  }
+  .fixed{
+    position: fixed;
+    width: 100%;
+  }
+.me-auto{
+    display: flex;
+align-items: center;
+  }
+  .button_toggle{
+    display:none;
+
+  }
+  .link{
+    padding: 8px 16px !important;
+  }
+  .container-fluid{
+    padding: 0px 0px !important;
+  }
+  
+  
+  
