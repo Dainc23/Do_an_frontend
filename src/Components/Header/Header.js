@@ -12,9 +12,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../style.css'
 import { Button, Collapse, DropdownItem, DropdownMenu, DropdownToggle, Nav, NavItem, Navbar, NavbarBrand, NavbarText, NavbarToggler, UncontrolledDropdown } from 'reactstrap';
 const Header = () => {
+    const [collapsed, setCollapsed] = useState(true);
+    const toggleNavbar = () => setCollapsed(!collapsed)
+    const [collapsed1, setCollapsed1] = useState(true);
+    const toggleNavbar1 = () => setCollapsed1(!collapsed1)
+    const [select, setSelect] = useState(true)
+    const toggleSelect=()=>setSelect(!select)
 
-    const [isOpen, setIsOpen] = useState(false);
-    const toggle = () => setIsOpen(!isOpen);
+
     return (
         <div className='fixed'>
             <div className='header'>
@@ -46,9 +51,9 @@ const Header = () => {
                     <div>
                         <Navbar >
                             <div className='Brand_menu'>
-                                <Button className='bar'><i class="fa-solid fa-bars-staggered"></i></Button>
+                                <Button onClick={toggleSelect} color="link" className='bar'><i class="fa-solid fa-bars-staggered"></i></Button>
                                 <NavbarBrand href="/"><div className='logo'><img src={logo}></img></div></NavbarBrand>
-                                <Button className='bar_search'><img src={search1} /></Button>
+                                <Button color="link" className='bar_search'><img src={search1} /></Button>
                                 <Nav className="me-auto" >
                                     <NavItem>
                                         <NavLink href="/components/"><p>Home</p></NavLink>
@@ -105,11 +110,27 @@ const Header = () => {
                                 </NavItem>
                             </div>
 
+                        </Navbar>
 
+                    </div>
+                </div>
+            </div>
+            <div className={select?"menu_select":"menu_select active"}>
+                <div className='container'>
+                    <Nav className="list_menu" >
+                        <NavItem>
+                            <NavLink href="/components/"><p>Home</p></NavLink>
+                        </NavItem>
 
+                        <UncontrolledDropdown nav inNavbar>
+                            <DropdownToggle nav caret>
+                                <p>Shop</p>
 
-                            <Collapse isOpen={isOpen} navbar>
-                                <Nav className="me-auto" navbar>
+                                <NavbarToggler targetId="1" onClick={toggleNavbar} className="fa-solid fa-angle-down" />
+
+                            </DropdownToggle>
+                            <Collapse collapseId="1" isOpen={!collapsed} navbar>
+                                <Nav navbar>
                                     <NavItem>
                                         <NavLink href="/components/">Components</NavLink>
                                     </NavItem>
@@ -118,31 +139,50 @@ const Header = () => {
                                             GitHub
                                         </NavLink>
                                     </NavItem>
-                                    <UncontrolledDropdown nav inNavbar>
-                                        <DropdownToggle nav caret>
-                                            Options
-                                        </DropdownToggle>
-                                        <DropdownMenu right>
-                                            <DropdownItem>Option 1</DropdownItem>
-                                            <DropdownItem>Option 2</DropdownItem>
-                                            <DropdownItem divider />
-                                            <DropdownItem>Reset</DropdownItem>
-                                        </DropdownMenu>
-                                    </UncontrolledDropdown>
                                 </Nav>
-                                <NavbarText>Simple Text</NavbarText>
                             </Collapse>
-                        </Navbar>
-                    </div>
 
+                        </UncontrolledDropdown>
+                        <NavItem>
+
+                            <NavLink href="https://github.com/reactstrap/reactstrap">
+                                <p>Products</p>
+                            </NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink href="https://github.com/reactstrap/reactstrap">
+                                <p>Blog</p>
+                            </NavLink>
+                        </NavItem>
+                        <UncontrolledDropdown nav inNavbar>
+                            <DropdownToggle nav caret>
+                                <p>Pages</p>
+
+                                <NavbarToggler id="2" onClick={toggleNavbar1} className="fa-solid fa-angle-down" />
+                            </DropdownToggle>
+                            <Collapse targetId="2" isOpen={!collapsed1} navbar>
+                                <Nav navbar>
+                                    <NavItem>
+                                        <NavLink href="/components/">Components</NavLink>
+                                    </NavItem>
+                                    <NavItem>
+                                        <NavLink href="https://github.com/reactstrap/reactstrap">
+                                            GitHub
+                                        </NavLink>
+                                    </NavItem>
+                                </Nav>
+                            </Collapse>
+                        </UncontrolledDropdown>
+                    </Nav>
 
                 </div>
 
             </div>
 
 
+        </div>
 
-        </div >
+
     );
 }
 

@@ -376,7 +376,7 @@
 
     .header {
         background-color: #ffff;
-        box-shadow: none;
+        
 
     }
 
@@ -585,6 +585,12 @@
 .dropdown-toggle:hover{
     color: #122940 !important;
 }
+.bar,.bar_search{
+    display: none !important;
+}
+.menu_select{
+    display: none;
+}
 @media only screen and (max-width: 1200px){
     .me-auto {
         margin-left: 20px !important;
@@ -626,6 +632,76 @@
         outline: none;
         border: none;
     }
+    .Brand_menu .bar i{
+        color: #122940;
+        font-size: 22px;
+    }
+    .container-fluid {
+        padding: 10px 0px !important;
+    }
+    .Brand_menu .bar_search img{
+        width: 20px;
+        transform: translateY(-1px);
+
+    }
+    .menu_select .list_menu{
+        display: inline-block;
+        width: 100%;
+    }
+    .menu_select .list_menu a{
+        width: 100%;
+        display: flex !important;
+        justify-content: space-between !important;
+        font-family: var(--font-family);
+        font-weight: var(--font-regular);
+        font-size: var(--fontsize-body1);
+    }
+    
+    .menu_select .dropdown-toggle p{
+        width: 90%;
+    }
+    .menu_select{
+        background-color: #FAFAFA;
+        display: block;
+        overflow-y: auto;
+        height: 100vh;
+        overflow-x: hidden;
+        position: absolute;
+        width: 100%;
+        left: -110% ;
+        transition: 0.3s !important;
+    }
+    .menu_select.active{
+        background-color: #FAFAFA;
+        display: block;
+        overflow-y: auto;
+        height: 100vh;
+        overflow-x: hidden;
+        position: absolute;
+        width: 100%;
+        left: 0%;
+        
+    }
+    .list_menu a {
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        padding: 20px 0;
+        justify-content: space-between;
+        color: #122940;
+        border-bottom: 1px #dad7d7 solid !important;
+    }
+    .list_menu .dropdown{
+        display: inline-block;
+        width: 100% !important;
+    }
+    .bar,.bar_search{
+        display: block !important;
+    }
+    
+}
+.navbar-toggler-icon{
+    display: none !important;
 }
 
 
