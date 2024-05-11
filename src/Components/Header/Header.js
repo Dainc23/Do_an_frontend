@@ -17,7 +17,7 @@ const Header = () => {
     const [collapsed1, setCollapsed1] = useState(true);
     const toggleNavbar1 = () => setCollapsed1(!collapsed1)
     const [select, setSelect] = useState(true)
-    const toggleSelect=()=>setSelect(!select)
+    const toggleSelect = () => setSelect(!select)
 
 
     return (
@@ -65,10 +65,10 @@ const Header = () => {
                                             <i class="fa-solid fa-angle-down"></i>
                                         </DropdownToggle>
                                         <DropdownMenu right>
-                                            <DropdownItem>Option 1</DropdownItem>
-                                            <DropdownItem>Option 2</DropdownItem>
-                                            <DropdownItem divider />
-                                            <DropdownItem>Reset</DropdownItem>
+                                            <DropdownItem>Outlet</DropdownItem>
+                                            <DropdownItem>Footwear</DropdownItem>
+                                            
+                                            <DropdownItem>Clothigs</DropdownItem>
                                         </DropdownMenu>
                                     </UncontrolledDropdown>
                                     <NavItem>
@@ -88,9 +88,9 @@ const Header = () => {
                                             <i class="fa-solid fa-angle-down"></i>
                                         </DropdownToggle>
                                         <DropdownMenu right>
-                                            <DropdownItem>Option 1</DropdownItem>
-                                            <DropdownItem>Option 2</DropdownItem>
-                                            <DropdownItem divider />
+                                            <DropdownItem>About us</DropdownItem>
+                                            <DropdownItem>Contact</DropdownItem>
+                                            
                                             <DropdownItem>Reset</DropdownItem>
                                         </DropdownMenu>
                                     </UncontrolledDropdown>
@@ -115,7 +115,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <div className={select?"menu_select":"menu_select active"}>
+            <div className={select ? "menu_select" : "menu_select active"}>
                 <div className='container'>
                     <Nav className="list_menu" >
                         <NavItem>
@@ -132,13 +132,15 @@ const Header = () => {
                             <Collapse collapseId="1" isOpen={!collapsed} navbar>
                                 <Nav navbar>
                                     <NavItem>
-                                        <NavLink href="/components/">Components</NavLink>
+                                        <NavLink href="/components/">Outlet</NavLink>
                                     </NavItem>
                                     <NavItem>
-                                        <NavLink href="https://github.com/reactstrap/reactstrap">
-                                            GitHub
-                                        </NavLink>
+                                        <NavLink href="/components/">Footwear</NavLink>
                                     </NavItem>
+                                    <NavItem>
+                                        <NavLink href="/components/">Clothigs</NavLink>
+                                    </NavItem>
+                                    
                                 </Nav>
                             </Collapse>
 
@@ -163,11 +165,11 @@ const Header = () => {
                             <Collapse targetId="2" isOpen={!collapsed1} navbar>
                                 <Nav navbar>
                                     <NavItem>
-                                        <NavLink href="/components/">Components</NavLink>
+                                        <NavLink href="/components/">About us</NavLink>
                                     </NavItem>
                                     <NavItem>
                                         <NavLink href="https://github.com/reactstrap/reactstrap">
-                                            GitHub
+                                            Contact us
                                         </NavLink>
                                     </NavItem>
                                 </Nav>
@@ -176,8 +178,18 @@ const Header = () => {
                     </Nav>
 
                 </div>
+                <div className='funtion_bottom'>
+                    <NavItem className='icon'>
+                        <NavLink><img src={heard}></img></NavLink>
+                        <NavLink><img src={bag}></img><div className='number_cart'><p>2</p></div></NavLink>
+                        <NavLink><img src={user}></img></NavLink>
+                    </NavItem>
+
+                </div>
 
             </div>
+           
+
 
 
         </div>

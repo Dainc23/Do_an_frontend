@@ -1,6 +1,5 @@
 * {
-    padding: 0;
-    margin: 0;
+    
     box-sizing: border-box !important;
 }
 
@@ -41,7 +40,10 @@
 .infor .infor_right .langues p {
     margin: 0;
 }
-
+.fixed{
+    height: 100vh !important;
+    min-height: 100vh !important;
+}
 .infor .infor_right .icon {
     width: 138px;
     display: flex;
@@ -376,7 +378,7 @@
 
     .header {
         background-color: #ffff;
-        
+
 
     }
 
@@ -450,15 +452,17 @@
 
 .me-auto a {
     padding: 0px 0px !important;
-    
+
 
 }
-.me-auto{
+
+.me-auto {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 400px;
 }
+
 .container-fluid {
     padding: 14px 0px !important;
 }
@@ -543,22 +547,27 @@
 .me-auto {
     margin-left: 50px;
 }
-.dropdown-toggle{
+
+.dropdown-toggle {
     display: flex !important;
     align-items: center;
 }
-.dropdown-toggle p{
+
+.dropdown-toggle p {
     padding: 0;
     margin: 0;
 }
+
 .dropdown-toggle i {
     width: 10px;
     font-size: 14px;
     margin-left: 3px;
 }
-.Brand_menu .active{
+
+.Brand_menu .active {
     position: relative;
 }
+
 .Brand_menu p::after {
     position: absolute;
     height: 3px;
@@ -569,86 +578,110 @@
     bottom: -8px;
     transition: 0.3s;
 }
-.Brand_menu p:hover::after{
+
+.Brand_menu p:hover::after {
     width: 100%;
-} 
-.Brand_menu p{
+}
+
+.Brand_menu p {
     padding: 0;
     margin: 0;
 }
+
 .nav-item {
     display: flex;
 }
-.dropdown:hover{
+
+.dropdown:hover {
     color: #122940 !important;
 }
-.dropdown-toggle:hover{
+
+.dropdown-toggle:hover {
     color: #122940 !important;
 }
-.bar,.bar_search{
+
+.bar,
+.bar_search {
     display: none !important;
 }
-.menu_select{
+
+.menu_select {
     display: none;
 }
-@media only screen and (max-width: 1200px){
+
+@media only screen and (max-width: 1200px) {
     .me-auto {
         margin-left: 20px !important;
     }
-    .navbar .container-fluid{
+
+    .navbar .container-fluid {
         width: 1000px;
     }
-    .header_funtion .input_search input{
+
+    .header_funtion .input_search input {
         width: 180px !important;
     }
-    .header_funtion .input_search{
+
+    .header_funtion .input_search {
         width: 300px !important;
         margin-right: 20px;
     }
 }
-@media only screen and (max-width: 400px){
+
+@media only screen and (max-width: 400px) {
     .me-auto {
         display: none !important;
     }
-    .navbar .container-fluid{
+
+    .navbar .container-fluid {
         width: 1000px;
         display: flex !important;
         align-items: center !important;
         justify-content: space-between !important;
     }
-    .header_funtion{
+
+    .header_funtion {
         display: none !important;
     }
-    .button_toggle{
+
+    .button_toggle {
         display: block;
     }
-    .Brand_menu{
+
+    .Brand_menu {
         width: 100% !important;
         display: flex !important;
         justify-content: space-between !important;
     }
-    .Brand_menu .bar,.Brand_menu .bar_search{
+
+    .Brand_menu .bar,
+    .Brand_menu .bar_search {
         background: none !important;
         outline: none;
         border: none;
     }
-    .Brand_menu .bar i{
+
+    .Brand_menu .bar i {
         color: #122940;
         font-size: 22px;
     }
+
     .container-fluid {
         padding: 10px 0px !important;
     }
-    .Brand_menu .bar_search img{
+
+    .Brand_menu .bar_search img {
         width: 20px;
         transform: translateY(-1px);
 
     }
-    .menu_select .list_menu{
+
+    .menu_select .list_menu {
         display: inline-block;
         width: 100%;
     }
-    .menu_select .list_menu a{
+
+    .menu_select .list_menu a {
         width: 100%;
         display: flex !important;
         justify-content: space-between !important;
@@ -656,32 +689,41 @@
         font-weight: var(--font-regular);
         font-size: var(--fontsize-body1);
     }
-    
-    .menu_select .dropdown-toggle p{
+
+    .menu_select .dropdown-toggle p {
         width: 90%;
     }
-    .menu_select{
+
+    .menu_select {
         background-color: #FAFAFA;
         display: block;
-        overflow-y: auto;
-        height: 100vh;
-        overflow-x: hidden;
+        overflow: auto !important;
+        height: auto !important;
+        
+        
         position: absolute;
         width: 100%;
-        left: -110% ;
+        left: -110%;
         transition: 0.3s !important;
-    }
-    .menu_select.active{
-        background-color: #FAFAFA;
-        display: block;
-        overflow-y: auto;
-        height: 100vh;
-        overflow-x: hidden;
-        position: absolute;
-        width: 100%;
-        left: 0%;
         
     }
+
+    .menu_select.active {
+        background-color: #FAFAFA;
+        display: block;
+        
+        height: auto !important;
+        
+        overflow-x: hidden;
+        position: absolute !important;
+        width: 100%;
+        left: 0%;
+        overflow: auto !important;
+        
+        
+
+    }
+
     .list_menu a {
         display: flex;
         text-decoration: none;
@@ -691,17 +733,72 @@
         color: #122940;
         border-bottom: 1px #dad7d7 solid !important;
     }
-    .list_menu .dropdown{
+
+    .list_menu .dropdown {
         display: inline-block;
         width: 100% !important;
     }
-    .bar,.bar_search{
+
+    .bar,
+    .bar_search {
         display: block !important;
     }
-    
+
+    .menu_select.active {
+      
+        
+        height: 100% !important;
+        min-height: 100% !important ;
+        position: fixed;
+    }
+
+    .funtion_bottom {
+
+        border-top: 1px solid #dad7d7;
+        width: 100%;
+        height: 60px;
+        background-color:  #FAFAFA;
+        bottom: 120px;
+        display: block;
+        left: 0;
+        position: sticky;
+        
+
+    }
+
+    .menu_select.active .container {
+        height: auto !important;
+        overflow: auto;
+    }
+
+    .funtion_bottom .icon {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .funtion_bottom .icon a {
+        padding: 10px 10px;
+        border-right: 1px solid #dad7d7;
+        width: 113px;
+        text-align: center;
+        transform: translateY(5px);
+
+    }
+    .funtion_bottom .icon .number_cart{
+        transform: translate(45px,-23px);
+        text-align: center;
+        
+    }
+    .funtion_bottom .icon .number_cart p{
+        transform: translate(1px,-3px) !important;
+    }
+
 }
-.navbar-toggler-icon{
+
+.navbar-toggler-icon {
     display: none !important;
 }
-
-
+.fixed{
+    height: auto !important;
+}
