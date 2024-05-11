@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../footer/footer.css'
+import './footer.css'
 import mail from '../../Img/envolop.svg'
 import { Accordion, AccordionBody, AccordionHeader, AccordionItem, Button, NavItem, NavbarBrand } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
@@ -59,7 +59,7 @@ const Footer = () => {
                     <AccordionItem >
                         <AccordionHeader className='collap_cuoi' targetId="3">Newsletter</AccordionHeader>
                         <AccordionBody accordionId="3">
-                            <h5>Newsletter</h5>
+                            
                             <p>Enter your email below to be the first to know about new <br />collections and product launches.</p>
                             <div className='input'>
                                 <img src={mail}></img>

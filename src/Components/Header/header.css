@@ -1,6 +1,11 @@
 * {
-    
+
     box-sizing: border-box !important;
+}
+
+.meo {
+    height: 500px;
+    background-color: #377E62;
 }
 
 .infor {
@@ -40,10 +45,9 @@
 .infor .infor_right .langues p {
     margin: 0;
 }
-.fixed{
-    height: 100vh !important;
-    min-height: 100vh !important;
-}
+
+
+
 .infor .infor_right .icon {
     width: 138px;
     display: flex;
@@ -229,6 +233,7 @@
 
 .top_infor {
     background-color: #f3f2f2;
+    height: 38px;
 }
 
 ::placeholder {
@@ -438,6 +443,8 @@
 .fixed {
     position: fixed;
     width: 100%;
+    z-index: 1;
+    height: auto;
 }
 
 .me-auto {
@@ -697,30 +704,31 @@
     .menu_select {
         background-color: #FAFAFA;
         display: block;
-        overflow: auto !important;
-        height: auto !important;
         
         
+        height: calc(100vh - 113px);
+
+
         position: absolute;
         width: 100%;
         left: -110%;
         transition: 0.3s !important;
-        
+
     }
 
     .menu_select.active {
         background-color: #FAFAFA;
         display: block;
-        
-        height: auto !important;
-        
-        overflow-x: hidden;
+
+       
+
+       
         position: absolute !important;
         width: 100%;
         left: 0%;
-        overflow: auto !important;
         
-        
+
+
 
     }
 
@@ -739,16 +747,16 @@
         width: 100% !important;
     }
 
-    .bar,
-    .bar_search {
+    .bar,.bar_search {
         display: block !important;
     }
 
+
     .menu_select.active {
-      
-        
-        height: 100% !important;
-        min-height: 100% !important ;
+
+
+        height: calc(100vh - 113px) !important;
+
         position: fixed;
     }
 
@@ -756,20 +764,17 @@
 
         border-top: 1px solid #dad7d7;
         width: 100%;
-        height: 60px;
-        background-color:  #FAFAFA;
-        bottom: 120px;
+        height: 56px;
+        background-color: #FAFAFA;
+        bottom: 0;
         display: block;
         left: 0;
-        position: sticky;
-        
+        position: absolute;
+
 
     }
 
-    .menu_select.active .container {
-        height: auto !important;
-        overflow: auto;
-    }
+    
 
     .funtion_bottom .icon {
         height: 100%;
@@ -785,13 +790,22 @@
         transform: translateY(5px);
 
     }
-    .funtion_bottom .icon .number_cart{
-        transform: translate(45px,-23px);
+
+    .funtion_bottom .icon .number_cart {
+        transform: translate(45px, -23px);
         text-align: center;
-        
+
     }
-    .funtion_bottom .icon .number_cart p{
-        transform: translate(1px,-3px) !important;
+
+    .funtion_bottom .icon .number_cart p {
+        transform: translate(1px, -3px) !important;
+    }
+
+    .navbar .container-fluid {
+        height: 75px !important;
+    }
+    .navbar{
+        padding: 0 !important;
     }
 
 }
@@ -799,6 +813,7 @@
 .navbar-toggler-icon {
     display: none !important;
 }
-.fixed{
+
+.fixed {
     height: auto !important;
 }

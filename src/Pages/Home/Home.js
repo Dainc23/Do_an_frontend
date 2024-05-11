@@ -7,6 +7,10 @@ const Home = () => {
     return (
         <div>
             <Header />
+            <div className='meo'>
+                    vfdf
+           </div>
+
             <Footer />
 
         </div>

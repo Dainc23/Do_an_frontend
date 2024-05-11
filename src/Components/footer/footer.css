@@ -1,7 +1,8 @@
 .footer {
-    position: fixed;
+    
     bottom: 0;
     width: 100%;
+    
 }
 
 .footer .container {
@@ -132,9 +133,17 @@
     .accordion-button{
         background-color: none !important;
         box-shadow: none;
-        border-bottom: 1px solid #EDF3F9;
+        border-top: 1px solid #EDF3F9;
         padding-top: 30px;
+        padding-bottom: 15px;
         
+    }
+    .accordion-button.collapsed{
+        background-color: none !important;
+        box-shadow: none;
+        border-top: 1px solid #EDF3F9;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
     .accordion-button:focus{
         box-shadow: none !important;
@@ -162,11 +171,33 @@
     .accordion-button{
         padding-left: 0;
         background-color: #FFFF !important;
+        font-family: var(--font-family);
+        font-weight: 600px;
+        font-size: 18px;
     }
     .collap_cuoi .accordion-button{
         border-bottom:none;
     }
     .accordion-body{
         padding: 0 !important;
+    }
+    .accordion-item{
+        border-radius: none;
+    }
+    .accordion{
+        position: none !important;
+        z-index: -1 ;
+    }
+    .box_main{
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+    .accordion-body .nav-item a{
+        text-decoration: none;
+        margin-bottom: 15px;
+        color: #272829;
+        font-family: var(--font-family);
+        font-size: var(--fontsize-body1);
+        font-weight: 300;
     }
 }
