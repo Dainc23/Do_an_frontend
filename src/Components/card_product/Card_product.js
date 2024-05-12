@@ -2,27 +2,28 @@ import React from 'react';
 import './card_product.css'
 import { Button, Card, CardBody, CardSubtitle, CardText, CardTitle } from 'reactstrap';
 import img_product from '../../Img/product.jpg'
-const CardProduct = () => {
+const CardProduct = (pros) => {
+    const{ite}=pros;
+
     return (
-        <div>
+        <div className='col-3'>
+
+
 
             <Card
                 style={{
                     width: '18rem'
                 }}
             >
-                <img
-                    alt="Sample"
-                    src={img_product}
-                />
-                <div className='status'><p>Hot</p></div>
+                <img alt="Sample" src={img_product} />
+                <div className={ite.status?"status":"statusactive"}>{ite.status}</div>
                 <CardBody>
 
                     <CardSubtitle
                         className="mb-2 text-muted"
                         tag="h6"
                     >
-                        HOODIE
+                        {ite.collection}
                     </CardSubtitle>
                     <div className='quality'>
                         <div className='star'>
@@ -35,18 +36,19 @@ const CardProduct = () => {
                         <p>(123)</p>
                     </div>
                     <CardTitle tag="h5">
-                        Hoodie with Logo
+                        {ite.name}
                     </CardTitle>
                     <CardText>
-                        USD$45.00
+                        USD${ite.cost}.00
                     </CardText>
                     <Button>
                         Add to cart
                     </Button>
                 </CardBody>
             </Card>
-
         </div>
+
+
     );
 }
 

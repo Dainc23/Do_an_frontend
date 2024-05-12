@@ -35,42 +35,42 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                <Accordion open={open} toggle={toggle} >
-                    <AccordionItem>
-                        <AccordionHeader targetId="1">Account</AccordionHeader>
-                        <AccordionBody accordionId="1">
-                            <NavItem><NavLink>Login/register</NavLink></NavItem>
-                            <NavItem><NavLink>View cart</NavLink></NavItem>
-                            <NavItem><NavLink>My wishlist</NavLink></NavItem>
-                            <NavItem><NavLink>Check out</NavLink></NavItem>
-                            <NavItem><NavLink>Order tracking</NavLink></NavItem>
-                        </AccordionBody>
-                    </AccordionItem>
-                    <AccordionItem>
-                        <AccordionHeader targetId="2">Services</AccordionHeader>
-                        <AccordionBody accordionId="2">
-                            <NavItem><NavLink>About us</NavLink></NavItem>
-                            <NavItem><NavLink>FAQ’s</NavLink></NavItem>
-                            <NavItem><NavLink>Returns & refund</NavLink></NavItem>
-                            <NavItem><NavLink>Free shipping</NavLink></NavItem>
-                            <NavItem><NavLink>Careers</NavLink></NavItem>
-                        </AccordionBody>
-                    </AccordionItem>
-                    <AccordionItem >
-                        <AccordionHeader className='collap_cuoi' targetId="3">Newsletter</AccordionHeader>
-                        <AccordionBody accordionId="3">
-                            
-                            <p>Enter your email below to be the first to know about new <br />collections and product launches.</p>
-                            <div className='input'>
-                                <img src={mail}></img>
-                                <input placeholder='Enter your email'></input>
-                                <Button>Submit</Button>
-                            </div>
-                            <p className='sub_input'>We promise not send spam to you!</p>
-                        </AccordionBody>
-                    </AccordionItem>
-                </Accordion>
-            </div>
+                    <Accordion open={open} toggle={toggle} >
+                        <AccordionItem>
+                            <AccordionHeader targetId="1">Account</AccordionHeader>
+                            <AccordionBody accordionId="1">
+                                <NavItem><NavLink>Login/register</NavLink></NavItem>
+                                <NavItem><NavLink>View cart</NavLink></NavItem>
+                                <NavItem><NavLink>My wishlist</NavLink></NavItem>
+                                <NavItem><NavLink>Check out</NavLink></NavItem>
+                                <NavItem><NavLink>Order tracking</NavLink></NavItem>
+                            </AccordionBody>
+                        </AccordionItem>
+                        <AccordionItem>
+                            <AccordionHeader targetId="2">Services</AccordionHeader>
+                            <AccordionBody accordionId="2">
+                                <NavItem><NavLink>About us</NavLink></NavItem>
+                                <NavItem><NavLink>FAQ’s</NavLink></NavItem>
+                                <NavItem><NavLink>Returns & refund</NavLink></NavItem>
+                                <NavItem><NavLink>Free shipping</NavLink></NavItem>
+                                <NavItem><NavLink>Careers</NavLink></NavItem>
+                            </AccordionBody>
+                        </AccordionItem>
+                        <AccordionItem >
+                            <AccordionHeader className='collap_cuoi' targetId="3">Newsletter</AccordionHeader>
+                            <AccordionBody accordionId="3">
+
+                                <p>Enter your email below to be the first to know about new <br />collections and product launches.</p>
+                                <div className='input'>
+                                    <img src={mail}></img>
+                                    <input placeholder='Enter your email'></input>
+                                    <Button>Submit</Button>
+                                </div>
+                                <p className='sub_input'>We promise not send spam to you!</p>
+                            </AccordionBody>
+                        </AccordionItem>
+                    </Accordion>
+                </div>
                 <div className='box'>
                     <h5>Account</h5>
                     <NavItem><NavLink>Login/register</NavLink></NavItem>
@@ -98,7 +98,7 @@ const Footer = () => {
                     <p className='sub_input'>We promise not send spam to you!</p>
                 </div>
             </div>
-            
+
             <div className='bottom_footer'>
                 <div className='container'>
                     <p>Copyright © 2022 <span>RemitStore</span>. All Rights Reserved.</p>
