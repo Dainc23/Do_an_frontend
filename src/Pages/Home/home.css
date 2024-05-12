@@ -1,0 +1,18 @@
+.body{
+    margin-top: 113px;
+}
+.row .col-3{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.row .box1.col-3{
+    padding-left: 0 !important;
+}
+.row .box4.col-3{
+    padding-right: 0 !important;
+}
+.banner{
+    background-color: #377E62;
+    height: 400px;
+    margin-bottom: 40px;
+}
