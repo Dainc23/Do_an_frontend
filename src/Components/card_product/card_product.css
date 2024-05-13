@@ -3,7 +3,7 @@
     position: relative;
 }
 .card img{
-    width: auto;
+    width: 100% !important;
     height: auto;
     
 }
@@ -80,7 +80,7 @@
     background-color: #275d94 !important;
 }
 .row .col-3{
-    width: auto;
+    margin-top: 30px;
 }
 .card .status.active{
     display: none !important;

@@ -222,7 +222,7 @@
 
 .header {
     background-color: #ffff;
-    box-shadow: rgba(0, 0, 0, 0.20) 0px 2px 7px;
+    
 
 }
 
@@ -817,4 +817,5 @@
 .fixed {
     height: auto !important;
     top:0%;
+    
 }
