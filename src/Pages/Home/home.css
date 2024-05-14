@@ -109,7 +109,7 @@
     margin-left: 15px;
 }
 .sub_banner{
-    margin-bottom: 120px;
+    margin-bottom: 100px;
 }
 .sub_banner .container .banner1 h3,.sub_banner .container .banner2 h3{
     font-size:36px ;
@@ -122,4 +122,69 @@
     font-family: var(--font-family);
     color: #5A6D80;
     font-weight: 300;
+}
+.sub_banner .container .banner1 .btn,.sub_banner .container .banner2 .btn{
+    background-color: #2F70B3;
+    border: none;
+    border-radius: 12px;
+    margin-top: 10px;
+    font-family: var(--font-family);
+    height: 44px;
+    width: 120px;
+}
+.sub_banner .container .banner1 .btn:active,.sub_banner .container .banner2 .btn:active{
+    background-color: #272829 !important;
+}
+.sub_banner .container .banner1 .btn:hover,.sub_banner .container .banner2 .btn:hover{
+    background-color: #272829 !important;
+}
+
+.react-multiple-carousel__arrow{
+    background-color: #EDF3F9 !important;
+    transform: translateY(-95px);
+    z-index: 0 !important;
+   
+    
+}
+.react-multiple-carousel__arrow::before {
+    color: #1D1E20 !important;
+}
+.New_arrival_products .container{
+    position: relative;
+}
+.carousel-button-group .one{
+    background-color: #1D1E20 !important;
+}
+.react-multiple-carousel__arrow--right {
+    right: calc(2% + 1px) !important;
+    display: block !important;
+}
+.react-multiple-carousel__arrow--left {
+    left: calc(-1% + 1px) !important;
+    display: block !important;
+}
+.New_arrival_products h1{
+    font-family: var(--font-family);
+    font-weight: bold;
+    font-size: 36px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.react-multi-carousel-list{
+    position: unset !important;
+}
+.banner_body .container{
+    background-color: #FFF5F0;
+    background-image: url(../../Img/body_banner.png);
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    background-position: center;
+    border-radius: 10px;
+    padding: 95px 290px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.coutdown{
+    display: flex;
 }

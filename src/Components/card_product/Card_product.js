@@ -6,7 +6,7 @@ const CardProduct = (pros) => {
     const{ite}=pros;
 
     return (
-        <div className='col-3'>
+        <div className='col-xl-3 col-lg-4 col-md-6 col-12'>
 
 
 
