@@ -156,14 +156,14 @@
     background-color: #1D1E20 !important;
 }
 .react-multiple-carousel__arrow--right {
-    right: calc(2% + 1px) !important;
+    right: calc(17% + 1px) !important;
     display: block !important;
 }
 .react-multiple-carousel__arrow--left {
-    left: calc(-1% + 1px) !important;
+    left: calc(15% + 1px) !important;
     display: block !important;
 }
-.New_arrival_products h1{
+.Discover_our_featured_products h1{
     font-family: var(--font-family);
     font-weight: bold;
     font-size: 36px;
@@ -178,13 +178,98 @@
     background-color: #FFF5F0;
     background-image: url(../../Img/body_banner.png);
     background-repeat: no-repeat;
-    background-size: 1000px;
+    background-size: 1200px;
     background-position: center;
     border-radius: 10px;
     padding: 95px 290px;
     margin-top: 100px;
     margin-bottom: 100px;
+    text-align: center;
 }
 .coutdown{
     display: flex;
+    justify-content: space-between;
+    width: 420px;
+    margin: 0 auto;
+}
+.coutdown .number{
+    background-color: #FFEDE4;
+    font-family: var(--font-family);
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+.coutdown .number h3{
+    font-family: var(--font-family);
+    font-size: 36px;
+    margin: 0;
+}
+.banner_body h1{
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 36px !important;
+    letter-spacing: -12;
+    font-weight: bold;
+    margin-bottom: 45px;
+}
+.phantram{
+    color: #FF7979;
+     font-family: var(--font-family);
+}
+.banner_body .btn{
+    margin-top: 36px;
+    background-color: #FFF5F0;
+    border-radius: 10px;
+    border: 2px solid #1D1E20;
+    color: #1D1E20;
+    padding: 8px 20px;
+    font-size: 16px;
+    font-family: var(--font-family);
+    
+}
+.banner_body .btn:active{
+    background-color: #1D1E20;
+    color: #FFFF;
+}
+.banner_body .btn:hover{
+    background-color: #1D1E20;
+    color: #FFFF;
+}
+.banner_body p{
+    font-family: var(--font-family);
+    font-size: 16px;
+    margin-top: 10px;
+    color: #5A6D80;
+}
+.New_arrival_products .tag{
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.New_arrival_products .nav-item a{
+    text-decoration: none;
+    font-family: var(--font-family);
+    color: #5A6D80;
+    font-size: 16px;
+}
+.New_arrival_products .tag p{
+font-family: var(--font-family);
+font-size: 16px;
+color: #5A6D80;
+
+}
+.New_arrival_products .title{
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.New_arrival_products .products{
+    margin-top: 20px;
+}
+.New_arrival_products .col-xl-3.col-lg-4.col-md-6.col-12{
+    margin-top: 30px;
 }

@@ -4,10 +4,13 @@ import Footer from '../../Components/footer/Footer';
 import CardProduct from '../../Components/card_product/Card_product';
 import './home.css';
 import axios from 'axios';
-import { Button, ButtonGroup } from 'reactstrap';
+import { Button, NavItem } from 'reactstrap';
 import img_banner from '../../Img/banner.png'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { NavLink } from 'react-router-dom';
+import '../../Components/testimonial_card/Testimonial'
+import Testimonial from '../../Components/testimonial_card/Testimonial';
 
 
 
@@ -33,7 +36,29 @@ const Home = () => {
             // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 1200 },
             items: 4,
-            slidesToSlide: 4
+            slidesToSlide: 2
+        },
+        desktop: {
+            breakpoint: { max: 1200, min: 1024 },
+            items: 3,
+            slidesToSlide: 3
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+
+    };
+    const responsive1 = {
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 1200 },
+            items: 3,
+            slidesToSlide: 2
         },
         desktop: {
             breakpoint: { max: 1200, min: 1024 },
@@ -85,15 +110,13 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
-                <section className='New_arrival_products'>
+                <section className='Discover_our_featured_products'>
                     <div className='container'>
                         <h1>Discover our featured products</h1>
 
-                        <Carousel responsive={responsive}
-                            autoPlaySpeed={3000}
-                            containerClass="carousel-container"
-
-                        >
+                        <Carousel  responsive={responsive}
+                            autoPlaySpeed={5000}
+                            autoPlay={false}>
                             {product != null && product.map((item, index) => (
                                 <CardProduct ite={item} key={index} />
                             ))}
@@ -102,37 +125,64 @@ const Home = () => {
                 </section>
                 <section className='banner_body'>
                     <div className='container'>
-                        <h1>Deal of the day upto
-                            -40% off</h1>
+                        <h1>Deal of the day upto<br />
+                            <span className='phantram'>-40% </span> off</h1>
                         <div className='coutdown'>
                             <div className='day'>
                                 <div className='number'><h3>05</h3></div>
-                                <p>day</p>
+                                <p>Day</p>
                             </div>
                             <div className='hours'>
                                 <div className='number'><h3>05</h3></div>
-                                <p>day</p>
+                                <p>Hours</p>
                             </div>
                             <div className='minutes'>
                                 <div className='number'><h3>05</h3></div>
-                                <p>day</p>
+                                <p>Minutes</p>
                             </div>
                             <div className='seconds'>
                                 <div className='number'><h3>05</h3></div>
-                                <p>day</p>
+                                <p>Seconds</p>
                             </div>
                         </div>
                         <Button>Shop now</Button>
                     </div>
                 </section>
-                <div className='container'>
-                    <div className='row'>
-                        {product != null && product.slice(0, 8).map((item, index) => (
-                            <CardProduct ite={item} key={index} />
-                        ))}
+                <section className='New_arrival_products'>
+
+                    <div className='container'>
+                        <h1 className='title'>New arrival products</h1>
+                        <div className='tag'>
+                            <NavItem><NavLink>Best seller</NavLink></NavItem>
+                            <p>//</p>
+                            <NavItem><NavLink>On sale</NavLink></NavItem>
+                            <p>//</p>
+                            <NavItem><NavLink>New arrivals</NavLink></NavItem>
+                        </div>
+                        <div className='products row'>
+                            {product != null && product.slice(0, 8).map((item, index) => (
+                                <CardProduct ite={item} key={index} />
+                            ))}
+                        </div>
                     </div>
-                </div>
+                </section>
+
             </div>
+            <section className='Client_love_us_&_we_love_them'>
+                <div className='container'>
+                <h1>Client love us & we love them</h1>
+                <Carousel 
+                responsive={responsive1}>
+                    <Testimonial />
+                    <Testimonial />
+                    <Testimonial />
+                    <Testimonial />
+
+
+                </Carousel>
+                </div>
+                
+            </section>
 
 
 
