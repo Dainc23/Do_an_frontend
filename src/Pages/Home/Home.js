@@ -114,7 +114,7 @@ const Home = () => {
                     <div className='container'>
                         <h1>Discover our featured products</h1>
 
-                        <Carousel  responsive={responsive}
+                        <Carousel responsive={responsive}
                             autoPlaySpeed={5000}
                             autoPlay={false}>
                             {product != null && product.map((item, index) => (
@@ -168,20 +168,20 @@ const Home = () => {
                 </section>
 
             </div>
-            <section className='Client_love_us_&_we_love_them'>
+            <section className='Clientloveus&welovethem'>
                 <div className='container'>
-                <h1>Client love us & we love them</h1>
-                <Carousel 
-                responsive={responsive1}>
-                    <Testimonial />
-                    <Testimonial />
-                    <Testimonial />
-                    <Testimonial />
-
-
-                </Carousel>
+                    <h1>Client love us & we love them</h1>
+                    <Carousel
+                        responsive={responsive1}
+                        showDots={true}
+                        dotListClass="custom-dot-list-style">
+                        <Testimonial />
+                        <Testimonial />
+                        <Testimonial />
+                        <Testimonial />
+                    </Carousel>
                 </div>
-                
+
             </section>
 
 

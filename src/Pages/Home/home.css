@@ -75,14 +75,18 @@
 .banner .container .content_banner .btn:hover {
     background-color: #272829 !important;
 }
-.sub_banner .container .banner1,.sub_banner .container .banner2{
+
+.sub_banner .container .banner1,
+.sub_banner .container .banner2 {
     background-color: #F2F7FB;
 }
-.sub_banner .container{
+
+.sub_banner .container {
     display: flex;
     justify-content: space-between;
 }
-.sub_banner .container .banner1{
+
+.sub_banner .container .banner1 {
     background-image: url(../../Img/banner1.png);
     background-repeat: no-repeat;
     padding: 42px;
@@ -95,7 +99,8 @@
     width: 100%;
     margin-right: 15px;
 }
-.sub_banner .container .banner2{
+
+.sub_banner .container .banner2 {
     background-image: url(../../Img/banner2.png);
     background-repeat: no-repeat;
     padding: 42px;
@@ -108,22 +113,29 @@
     width: 100%;
     margin-left: 15px;
 }
-.sub_banner{
+
+.sub_banner {
     margin-bottom: 100px;
 }
-.sub_banner .container .banner1 h3,.sub_banner .container .banner2 h3{
-    font-size:36px ;
+
+.sub_banner .container .banner1 h3,
+.sub_banner .container .banner2 h3 {
+    font-size: 36px;
     font-family: var(--font-family);
     color: #272829;
     font-weight: 600;
 }
-.sub_banner .container .banner1 p,.sub_banner .container .banner2 p{
-    font-size:16px ;
+
+.sub_banner .container .banner1 p,
+.sub_banner .container .banner2 p {
+    font-size: 16px;
     font-family: var(--font-family);
     color: #5A6D80;
     font-weight: 300;
 }
-.sub_banner .container .banner1 .btn,.sub_banner .container .banner2 .btn{
+
+.sub_banner .container .banner1 .btn,
+.sub_banner .container .banner2 .btn {
     background-color: #2F70B3;
     border: none;
     border-radius: 12px;
@@ -132,38 +144,48 @@
     height: 44px;
     width: 120px;
 }
-.sub_banner .container .banner1 .btn:active,.sub_banner .container .banner2 .btn:active{
-    background-color: #272829 !important;
-}
-.sub_banner .container .banner1 .btn:hover,.sub_banner .container .banner2 .btn:hover{
+
+.sub_banner .container .banner1 .btn:active,
+.sub_banner .container .banner2 .btn:active {
     background-color: #272829 !important;
 }
 
-.react-multiple-carousel__arrow{
+.sub_banner .container .banner1 .btn:hover,
+.sub_banner .container .banner2 .btn:hover {
+    background-color: #272829 !important;
+}
+
+.react-multiple-carousel__arrow {
     background-color: #EDF3F9 !important;
     transform: translateY(-95px);
     z-index: 0 !important;
-   
-    
+
+
 }
+
 .react-multiple-carousel__arrow::before {
     color: #1D1E20 !important;
 }
-.New_arrival_products .container{
+
+.New_arrival_products .container {
     position: relative;
 }
-.carousel-button-group .one{
+
+.carousel-button-group .one {
     background-color: #1D1E20 !important;
 }
+
 .react-multiple-carousel__arrow--right {
     right: calc(17% + 1px) !important;
     display: block !important;
 }
+
 .react-multiple-carousel__arrow--left {
     left: calc(15% + 1px) !important;
     display: block !important;
 }
-.Discover_our_featured_products h1{
+
+.Discover_our_featured_products h1 {
     font-family: var(--font-family);
     font-weight: bold;
     font-size: 36px;
@@ -171,10 +193,12 @@
     text-align: center;
     margin-bottom: 50px;
 }
-.react-multi-carousel-list{
+
+.react-multi-carousel-list {
     position: unset !important;
 }
-.banner_body .container{
+
+.banner_body .container {
     background-color: #FFF5F0;
     background-image: url(../../Img/body_banner.png);
     background-repeat: no-repeat;
@@ -186,25 +210,29 @@
     margin-bottom: 100px;
     text-align: center;
 }
-.coutdown{
+
+.coutdown {
     display: flex;
     justify-content: space-between;
     width: 420px;
     margin: 0 auto;
 }
-.coutdown .number{
+
+.coutdown .number {
     background-color: #FFEDE4;
     font-family: var(--font-family);
     padding: 10px;
     border-radius: 10px;
-    
+
 }
-.coutdown .number h3{
+
+.coutdown .number h3 {
     font-family: var(--font-family);
     font-size: 36px;
     margin: 0;
 }
-.banner_body h1{
+
+.banner_body h1 {
     text-align: center;
     font-family: var(--font-family);
     font-size: 36px !important;
@@ -212,11 +240,13 @@
     font-weight: bold;
     margin-bottom: 45px;
 }
-.phantram{
+
+.phantram {
     color: #FF7979;
-     font-family: var(--font-family);
+    font-family: var(--font-family);
 }
-.banner_body .btn{
+
+.banner_body .btn {
     margin-top: 36px;
     background-color: #FFF5F0;
     border-radius: 10px;
@@ -225,41 +255,48 @@
     padding: 8px 20px;
     font-size: 16px;
     font-family: var(--font-family);
-    
+
 }
-.banner_body .btn:active{
+
+.banner_body .btn:active {
     background-color: #1D1E20;
     color: #FFFF;
 }
-.banner_body .btn:hover{
+
+.banner_body .btn:hover {
     background-color: #1D1E20;
     color: #FFFF;
 }
-.banner_body p{
+
+.banner_body p {
     font-family: var(--font-family);
     font-size: 16px;
     margin-top: 10px;
     color: #5A6D80;
 }
-.New_arrival_products .tag{
+
+.New_arrival_products .tag {
     display: flex;
     width: 350px;
     justify-content: space-between;
     margin: 0 auto;
 }
-.New_arrival_products .nav-item a{
+
+.New_arrival_products .nav-item a {
     text-decoration: none;
     font-family: var(--font-family);
     color: #5A6D80;
     font-size: 16px;
 }
-.New_arrival_products .tag p{
-font-family: var(--font-family);
-font-size: 16px;
-color: #5A6D80;
+
+.New_arrival_products .tag p {
+    font-family: var(--font-family);
+    font-size: 16px;
+    color: #5A6D80;
 
 }
-.New_arrival_products .title{
+
+.New_arrival_products .title {
     width: 100%;
     text-align: center;
     font-family: var(--font-family);
@@ -267,9 +304,11 @@ color: #5A6D80;
     font-weight: bold;
     margin-bottom: 20px;
 }
-.New_arrival_products .products{
+
+.New_arrival_products .products {
     margin-top: 20px;
 }
-.New_arrival_products .col-xl-3.col-lg-4.col-md-6.col-12{
+
+.New_arrival_products .col-xl-3.col-lg-4.col-md-6.col-12 {
     margin-top: 30px;
 }
