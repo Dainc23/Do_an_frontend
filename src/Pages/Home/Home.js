@@ -11,6 +11,7 @@ import 'react-multi-carousel/lib/styles.css';
 import { NavLink } from 'react-router-dom';
 import '../../Components/testimonial_card/Testimonial'
 import Testimonial from '../../Components/testimonial_card/Testimonial';
+import BlogCard from '../../Components/blog_card/blog_card';
 
 
 
@@ -148,6 +149,21 @@ const Home = () => {
                         <Button>Shop now</Button>
                     </div>
                 </section>
+                <section className='Clientloveus_welovethem'>
+                    <div className='container'>
+                        <h1>Client love us & we love them</h1>
+                        <Carousel
+                            responsive={responsive1}
+                            showDots={true}
+                            dotListClass="custom-dot-list-style">
+                            <Testimonial />
+                            <Testimonial />
+                            <Testimonial />
+                            <Testimonial />
+                        </Carousel>
+                    </div>
+
+                </section>
                 <section className='New_arrival_products'>
 
                     <div className='container'>
@@ -168,21 +184,19 @@ const Home = () => {
                 </section>
 
             </div>
-            <section className='Clientloveus&welovethem'>
-                <div className='container'>
-                    <h1>Client love us & we love them</h1>
-                    <Carousel
-                        responsive={responsive1}
-                        showDots={true}
-                        dotListClass="custom-dot-list-style">
-                        <Testimonial />
-                        <Testimonial />
-                        <Testimonial />
-                        <Testimonial />
-                    </Carousel>
-                </div>
 
+            <section className='Discoverdressingtipsfromourblog'>
+                <div className='container'>
+                    <h1>Discover dressing tips from our blog</h1>
+                    <div className='row'>
+                        <BlogCard />
+                        <BlogCard />
+                        <BlogCard />
+                    </div>
+                    <Button>View more</Button>
+                </div>
             </section>
+            <div className='service'></div>
 
 
 

@@ -312,3 +312,52 @@
 .New_arrival_products .col-xl-3.col-lg-4.col-md-6.col-12 {
     margin-top: 30px;
 }
+.Clientloveus_welovethem .react-multiple-carousel__arrow{
+    transform: translateY(-12px);
+}
+.Clientloveus_welovethem h1{
+    font-family: var(--font-family);
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+.New_arrival_products{
+    margin-bottom: 100px;
+}
+.Discoverdressingtipsfromourblog{
+    margin-top: 100px;
+}
+.Discoverdressingtipsfromourblog h1{
+    font-family: var(--font-family);
+    font-size: 36px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.Clientloveus_welovethem{
+    margin-bottom: 100px;
+}
+.Discoverdressingtipsfromourblog .container{
+    text-align: center;
+}
+.Discoverdressingtipsfromourblog .btn{
+    background-color: #FFFF;
+    border: #1D1E20 2px solid;
+    color: #1D1E20;
+    font-family: var(--font-family);
+    margin-top: 30px;
+}
+.Discoverdressingtipsfromourblog .btn:hover{
+    background-color: #1D1E20;
+    color: #FFFF;
+}
+.Discoverdressingtipsfromourblog{
+    margin-bottom: 100px;
+}
+.service{
+    height: 100px;
+    background-color: #EDF3F9;
+}
