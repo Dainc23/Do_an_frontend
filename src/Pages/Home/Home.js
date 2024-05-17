@@ -89,7 +89,7 @@ const Home = () => {
                                 <p className='sub_tilte'> New Arrivals</p>
                                 <h1 className='tilte'>Perfect Fashions <br /> For Summer</h1>
                                 <p className='body_text'>There's nothing like a trend, let's select items to make your
-                                    life <br />with a new fashion style!</p>
+                                    life with a new fashion style!</p>
                                 <Button>Explore Now</Button>
                             </div>
                         </div>
@@ -154,7 +154,7 @@ const Home = () => {
                         <h1>Client love us & we love them</h1>
                         <Carousel
                             responsive={responsive1}
-                            showDots={true}
+                            
                             dotListClass="custom-dot-list-style">
                             <Testimonial />
                             <Testimonial />
@@ -196,7 +196,7 @@ const Home = () => {
                     <Button>View more</Button>
                 </div>
             </section>
-            <div className='service'></div>
+            
 
 
 

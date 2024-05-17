@@ -312,10 +312,12 @@
 .New_arrival_products .col-xl-3.col-lg-4.col-md-6.col-12 {
     margin-top: 30px;
 }
-.Clientloveus_welovethem .react-multiple-carousel__arrow{
+
+.Clientloveus_welovethem .react-multiple-carousel__arrow {
     transform: translateY(-12px);
 }
-.Clientloveus_welovethem h1{
+
+.Clientloveus_welovethem h1 {
     font-family: var(--font-family);
     font-size: 36px;
     font-weight: bold;
@@ -323,13 +325,16 @@
     width: 100%;
     text-align: center;
 }
-.New_arrival_products{
+
+.New_arrival_products {
     margin-bottom: 100px;
 }
-.Discoverdressingtipsfromourblog{
+
+.Discoverdressingtipsfromourblog {
     margin-top: 100px;
 }
-.Discoverdressingtipsfromourblog h1{
+
+.Discoverdressingtipsfromourblog h1 {
     font-family: var(--font-family);
     font-size: 36px;
     width: 100%;
@@ -337,27 +342,122 @@
     margin-bottom: 30px;
     font-weight: bold;
 }
-.Clientloveus_welovethem{
+
+.Clientloveus_welovethem {
     margin-bottom: 100px;
 }
-.Discoverdressingtipsfromourblog .container{
+
+.Discoverdressingtipsfromourblog .container {
     text-align: center;
 }
-.Discoverdressingtipsfromourblog .btn{
+
+.Discoverdressingtipsfromourblog .btn {
     background-color: #FFFF;
     border: #1D1E20 2px solid;
     color: #1D1E20;
     font-family: var(--font-family);
     margin-top: 30px;
 }
-.Discoverdressingtipsfromourblog .btn:hover{
+
+.Discoverdressingtipsfromourblog .btn:hover {
     background-color: #1D1E20;
     color: #FFFF;
 }
-.Discoverdressingtipsfromourblog{
+
+.Discoverdressingtipsfromourblog {
     margin-bottom: 100px;
 }
-.service{
-    height: 100px;
-    background-color: #EDF3F9;
+
+@media only screen and (max-width: 400px) {
+    .banner .container {
+        display: inline-block;
+    }
+
+    .banner .container .content_banner .content {
+        text-align: center;
+    }
+
+    .banner .container .content_banner .content .sub_tilte {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .banner .container .content_banner .content .tilte {
+        font-size: 36px;
+        color: #143453;
+        line-height: 46px;
+        margin-top: ;
+    }
+
+    .banner .container .content_banner .content .body_text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .banner {
+        height: auto;
+        overflow: hidden;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .banner .container img {
+        position: sticky;
+        width: 400px;
+        left: 0;
+        margin-top: 20px;
+    }
+
+    .sub_banner .container {
+        display: inline-block !important;
+    }
+
+    .sub_banner .container .banner1 {
+        
+        background-repeat: no-repeat;
+        padding: 30px;
+        
+        background-position: right bottom;
+        background-size: 140px;
+        border-radius: 10px;
+        height: auto;
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+
+    .sub_banner .container .banner2 {
+        
+        background-repeat: no-repeat;
+        padding: 30px;
+        
+        background-position: right bottom;
+        background-size: 125px;
+        border-radius: 10px;
+        height: auto;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .sub_banner .container .banner2 h3,
+    .sub_banner .container .banner1 h3 {
+        font-size: 21px;
+        line-height: 31px;
+        width: 100%;
+    }
+
+    .sub_banner .container .banner2 p,
+    .sub_banner .container .banner1 p {
+        display: none;
+    }
+    .sub_banner{
+        margin-bottom: 50px;
+    }
+    .Discover_our_featured_products .container h1{
+        text-align: center;
+        font-size: 34px !important;
+    }
+    .Discover_our_featured_products .container{
+        text-align: center;
+    }
 }

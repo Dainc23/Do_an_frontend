@@ -5,7 +5,10 @@ import { Accordion, AccordionBody, AccordionHeader, AccordionItem, Button, NavIt
 import { NavLink } from 'react-router-dom';
 import '../../style.css'
 import logo from '../../Img/logo.png'
-
+import delivery_icon from '../../Img/delivery-icon.svg'
+import refund_icon from '../../Img/refund-icon.svg'
+import support_icon from '../../Img/support-icon.svg'
+import tracking_icon from '../../Img/tracking-icon.svg' 
 const Footer = () => {
 
 
@@ -20,6 +23,38 @@ const Footer = () => {
 
     return (
         <div className='footer'>
+            <div className='service'>
+                <div className='service_detail container'>
+                    <div className='box'>
+                        <div className='icon_box'><img src={delivery_icon}></img></div>
+                        <div className='content_box'>
+                            <h5>Fast delivery</h5>
+                            <p>Free Shipping for order over $49</p>
+                        </div>
+                    </div>
+                    <div className='box'>
+                        <div className='icon_box'><img src={tracking_icon}></img></div>
+                        <div className='content_box'>
+                            <h5>Order tracking</h5>
+                            <p>Check your order status online</p>
+                        </div>
+                    </div>
+                    <div className='box'>
+                        <div className='icon_box'><img src={refund_icon}></img></div>
+                        <div className='content_box'>
+                            <h5>Refunds</h5>
+                            <p>Free 100% money back guarantee</p>
+                        </div>
+                    </div>
+                    <div className='box'>
+                        <div className='icon_box'><img src={support_icon}></img></div>
+                        <div className='content_box'>
+                            <h5>Quality support</h5>
+                            <p>Our team is always feedback 24/7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className='container'>
                 <div className='box_main'>
                     <NavbarBrand href="/"><img src={logo}></img></NavbarBrand>
