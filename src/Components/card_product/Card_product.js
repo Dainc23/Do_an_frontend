@@ -11,6 +11,7 @@ const CardProduct = (pros) => {
 
 
             <Card
+            
                 style={{
                     width: '18rem'
                 }}

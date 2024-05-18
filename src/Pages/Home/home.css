@@ -195,7 +195,7 @@
 }
 
 .react-multi-carousel-list {
-    position: unset !important;
+    position: relative !important;
 }
 
 .banner_body .container {
@@ -367,7 +367,18 @@
 .Discoverdressingtipsfromourblog {
     margin-bottom: 100px;
 }
-
+.Discover_our_featured_products .react-multi-carousel-dot-list {
+    display: none;
+}
+.Clientloveus_welovethem .react-multiple-carousel__arrow{
+    display: none !important;
+}
+.Clientloveus_welovethem .react-multi-carousel-dot-list{
+    transform: translateY(-7px);
+}
+.Clientloveus_welovethem .react-multi-carousel-list{
+    height: 320px;
+}
 @media only screen and (max-width: 400px) {
     .banner .container {
         display: inline-block;
@@ -386,7 +397,7 @@
         font-size: 36px;
         color: #143453;
         line-height: 46px;
-        margin-top: ;
+
     }
 
     .banner .container .content_banner .content .body_text {
@@ -413,10 +424,10 @@
     }
 
     .sub_banner .container .banner1 {
-        
+
         background-repeat: no-repeat;
         padding: 30px;
-        
+
         background-position: right bottom;
         background-size: 140px;
         border-radius: 10px;
@@ -427,10 +438,10 @@
     }
 
     .sub_banner .container .banner2 {
-        
+
         background-repeat: no-repeat;
         padding: 30px;
-        
+
         background-position: right bottom;
         background-size: 125px;
         border-radius: 10px;
@@ -450,14 +461,68 @@
     .sub_banner .container .banner1 p {
         display: none;
     }
-    .sub_banner{
+
+    .sub_banner {
         margin-bottom: 50px;
     }
-    .Discover_our_featured_products .container h1{
+
+    .Discover_our_featured_products .container h1 {
         text-align: center;
         font-size: 34px !important;
     }
-    .Discover_our_featured_products .container{
+
+    .Discover_our_featured_products .container {
         text-align: center;
+    }
+
+    .card img {
+        width: 180px !important;
+    }
+
+    .react-multi-carousel-item {
+        width: auto !important;
+    }
+
+    .react-multi-carousel-item .card-body {
+        text-align: start;
+        width: 180px !important;
+    }
+
+    .react-multi-carousel-item .card {
+        width: auto !important;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .react-multi-carousel-item .col-xl-3 {
+        width: 180px !important;
+        padding: 0px 8px;
+    }
+
+    .Clientloveus_welovethem .react-multiple-carousel__arrow {
+        display: none !important;
+    }
+
+    .Clientloveus_welovethem .react-multi-carousel-list {
+       overflow: none !important;
+    }
+
+    .react-multi-carousel-list {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        position: relative !important;
+    }
+    .react-multiple-carousel__arrow{
+        display: none !important;
+    }
+    .react-multi-carousel-item {
+        width: 100% !important;
+    }
+    .testimonial_card{
+        padding: 0px;
+    }
+    .Discover_our_featured_products .react-multi-carousel-dot-list {
+        display: flex!important;
     }
 }

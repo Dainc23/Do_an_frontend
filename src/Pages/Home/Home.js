@@ -50,7 +50,8 @@ const Home = () => {
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
-            items: 1
+            items: 2,
+            slidesToSlide: 2
         }
 
     };
@@ -59,7 +60,7 @@ const Home = () => {
             // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 1200 },
             items: 3,
-            slidesToSlide: 2
+            slidesToSlide: 1
         },
         desktop: {
             breakpoint: { max: 1200, min: 1024 },
@@ -67,12 +68,13 @@ const Home = () => {
             slidesToSlide: 3
         },
         tablet: {
-            breakpoint: { max: 1024, min: 464 },
+            breakpoint: { max: 1024, min: 400 },
             items: 2
         },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
+            breakpoint: { max: 400, min: 0 },
             items: 1
+
         }
 
     };
@@ -85,9 +87,9 @@ const Home = () => {
                 <div className='banner'>
                     <div className='container'>
                         <div className='content_banner'>
-                            <div className='content'>
+                            <div className='content' >
                                 <p className='sub_tilte'> New Arrivals</p>
-                                <h1 className='tilte'>Perfect Fashions <br /> For Summer</h1>
+                                <h1 className='tilte' >Perfect Fashions <br /> For Summer</h1>
                                 <p className='body_text'>There's nothing like a trend, let's select items to make your
                                     life with a new fashion style!</p>
                                 <Button>Explore Now</Button>
@@ -117,7 +119,8 @@ const Home = () => {
 
                         <Carousel responsive={responsive}
                             autoPlaySpeed={5000}
-                            autoPlay={false}>
+                            autoPlay={false}
+                            showDots={true}>
                             {product != null && product.map((item, index) => (
                                 <CardProduct ite={item} key={index} />
                             ))}
@@ -154,8 +157,13 @@ const Home = () => {
                         <h1>Client love us & we love them</h1>
                         <Carousel
                             responsive={responsive1}
-                            
-                            dotListClass="custom-dot-list-style">
+                            showDots={true}
+
+
+                            renderButtonGroupOutside={true}
+                        >
+                            <Testimonial />
+                            <Testimonial />
                             <Testimonial />
                             <Testimonial />
                             <Testimonial />
@@ -196,7 +204,7 @@ const Home = () => {
                     <Button>View more</Button>
                 </div>
             </section>
-            
+
 
 
 
