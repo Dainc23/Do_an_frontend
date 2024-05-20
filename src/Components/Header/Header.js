@@ -57,7 +57,7 @@ const Header = () => {
                                 <Button color="link" className='bar_search'><img src={search1} /></Button>
                                 <Nav className="me-auto" >
                                     <NavItem>
-                                        <NavLink href="/components/"><p>Home</p></NavLink>
+                                        <NavLink to='/' href="/components/"><p>Home</p></NavLink>
                                     </NavItem>
 
                                     <UncontrolledDropdown nav inNavbar>
@@ -74,9 +74,9 @@ const Header = () => {
                                     </UncontrolledDropdown>
                                     <NavItem>
 
-                                        <NavLink href="https://github.com/reactstrap/reactstrap">
-                                            <p>Products</p>
-                                        </NavLink>
+                                        <Link to='/Products'>
+                                            <p className='products'>Products</p>
+                                        </Link>
                                     </NavItem>
                                     <NavItem>
                                         <NavLink href="https://github.com/reactstrap/reactstrap">
@@ -89,8 +89,8 @@ const Header = () => {
                                             <i class="fa-solid fa-angle-down"></i>
                                         </DropdownToggle>
                                         <DropdownMenu right>
-                                            <DropdownItem>About us</DropdownItem>
-                                            <DropdownItem>Contact</DropdownItem>
+                                            <DropdownItem><NavLink to='/About'>About us</NavLink></DropdownItem>
+                                            <DropdownItem><NavLink to='/Contact'>Contact</NavLink></DropdownItem>
                                             
                                             <DropdownItem>Reset</DropdownItem>
                                         </DropdownMenu>
@@ -148,9 +148,9 @@ const Header = () => {
                         </UncontrolledDropdown>
                         <NavItem>
 
-                            <NavLink href="https://github.com/reactstrap/reactstrap">
+                            <Link to='/Products'>
                                 <p>Products</p>
-                            </NavLink>
+                            </Link>
                         </NavItem>
                         <NavItem>
                             <NavLink href="https://github.com/reactstrap/reactstrap">

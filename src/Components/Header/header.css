@@ -817,5 +817,9 @@
 .fixed {
     height: auto !important;
     top:0%;
+    border-bottom: 1px solid #D3DCE5;
     
+}
+.Brand_menu .products{
+    position: relative;
 }
