@@ -2,6 +2,7 @@ import React from 'react';
 import './card_product.css'
 import { Button, Card, CardBody, CardSubtitle, CardText, CardTitle } from 'reactstrap';
 import img_product from '../../Img/product.jpg'
+import { Link } from 'react-router-dom';
 const CardProduct = (pros) => {
     const{ite}=pros;
 
@@ -16,7 +17,7 @@ const CardProduct = (pros) => {
                     width: '18rem'
                 }}
             >
-                <img alt="Sample" src={img_product} />
+                <Link to={'Product/:id'}><img alt="Sample" src={img_product} /></Link>
                 <div className={ite.status?"status":"statusactive"}>{ite.status}</div>
                 <CardBody>
 

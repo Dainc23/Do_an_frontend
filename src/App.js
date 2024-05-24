@@ -6,11 +6,10 @@ import About_us from './Pages/about_us/About_us';
 import Contact from './Pages/contact/Contact';
 import Product_detail from './Pages/product_detail/Product_detail';
 import Products from './Pages/products/Products';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css'
 
-import Breadcrumbs from './Components/breadcrumb/Breadcrumbs';
+
 
 
 
