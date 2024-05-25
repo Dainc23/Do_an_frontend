@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Header from '../../Components/header/Header';
 import Footer from '../../Components/footer/Footer';
 import CardProduct from '../../Components/card_product/Card_product';
@@ -12,25 +12,12 @@ import { NavLink } from 'react-router-dom';
 import '../../Components/testimonial_card/Testimonial'
 import Testimonial from '../../Components/testimonial_card/Testimonial';
 import BlogCard from '../../Components/blog_card/blog_card';
+import { AppContext } from '../../AppContext';
 
 
 
 const Home = () => {
-    const [product, setProduct] = useState(null)
-    function getData() {
-        const url = "https://661b930865444945d04fca10.mockapi.io/ps"
-        axios.get(url)
-            .then(function (res) {
-                setProduct(res.data)
-
-            })
-            .catch(function (error) {
-                console.log(error)
-            })
-    }
-    useEffect(() => {
-        getData()
-    }, [])
+    const { product } = useContext(AppContext)
     console.log(product)
     const responsive = {
         superLargeDesktop: {

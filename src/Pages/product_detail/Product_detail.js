@@ -16,7 +16,8 @@ import axios from 'axios';
 import CardProduct from '../../Components/card_product/Card_product';
 
 
-const ProductDetail = () => {
+const ProductDetail = (pros) => {
+    const {ite}=pros;
     const [img, setImg] = useState(img_product)
 
     const changeImg = (e) => {

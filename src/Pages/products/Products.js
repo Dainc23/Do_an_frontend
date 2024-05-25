@@ -11,26 +11,15 @@ import { Link } from 'react-router-dom';
 
 import 'rc-slider/assets/index.css';
 import RcSlider from '../../Components/rc_slider/Rc_slider';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+
+
+
 import CardProduct from '../../Components/card_product/Card_product';
+import { AppContext } from '../../AppContext';
+import { useContext } from 'react';
 
 const Products = () => {
-    const [product, setProduct] = useState(null)
-    function getData() {
-        const url = "https://661b930865444945d04fca10.mockapi.io/ps"
-        axios.get(url)
-            .then(function (res) {
-                setProduct(res.data)
-
-            })
-            .catch(function (error) {
-                console.log(error)
-            })
-    }
-    useEffect(() => {
-        getData()
-    }, [])
+    const { product } = useContext(AppContext)
     return (
         <div>
             <Header />
@@ -80,7 +69,7 @@ const Products = () => {
                             <div className='Box'>
                                 <h3>PRICE</h3>
                                 <div className='kind'>
-                                    < RcSlider />
+                                   <RcSlider />
 
                                 </div>
 

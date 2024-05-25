@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import Slider,{ Range } from 'rc-slider';
+import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
+
 const RcSlider = () => {
     
     const [range, setRange] = useState([0, 400]);
@@ -10,7 +11,7 @@ const RcSlider = () => {
 
     return (
         <div>
-            <Slider.Range
+            <Slider range
                 min={0}
                 max={1000}
                 defaultValue={range}
