@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './header.css'
 import { Link, NavLink } from 'react-router-dom';
 import img1 from '../../Img/US.png'
@@ -10,15 +10,23 @@ import heard from '../../Img/heard-icon.svg'
 import user from '../../Img/user-icon.svg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../style.css'
-import { Button, Collapse, DropdownItem, DropdownMenu, DropdownToggle, Nav, NavItem, Navbar, NavbarBrand, NavbarText, NavbarToggler, UncontrolledDropdown } from 'reactstrap';
+import { Button, Collapse, DropdownItem, DropdownMenu, DropdownToggle, Nav, NavItem, Navbar, NavbarBrand, NavbarText, NavbarToggler, Offcanvas, OffcanvasBody, OffcanvasHeader, UncontrolledDropdown } from 'reactstrap';
+import ProductCart from '../product_cart/Product_cart';
+import { AppContext } from '../../AppContext';
 const Header = () => {
+    const{product,addCart,cart}=useContext(AppContext)
     const [collapsed, setCollapsed] = useState(true);
     const toggleNavbar = () => setCollapsed(!collapsed)
     const [collapsed1, setCollapsed1] = useState(true);
     const toggleNavbar1 = () => setCollapsed1(!collapsed1)
     const [select, setSelect] = useState(true)
     const toggleSelect = () => setSelect(!select)
+    const [isOpen, setIsOpen] = useState(false);
     
+        const toggleOffcanvas = () => {
+          setIsOpen(!isOpen);
+        };
+
 
 
     return (
@@ -68,7 +76,7 @@ const Header = () => {
                                         <DropdownMenu right>
                                             <DropdownItem>Outlet</DropdownItem>
                                             <DropdownItem>Footwear</DropdownItem>
-                                            
+
                                             <DropdownItem>Clothigs</DropdownItem>
                                         </DropdownMenu>
                                     </UncontrolledDropdown>
@@ -91,7 +99,7 @@ const Header = () => {
                                         <DropdownMenu right>
                                             <DropdownItem><NavLink to='/About'>About us</NavLink></DropdownItem>
                                             <DropdownItem><NavLink to='/Contact'>Contact</NavLink></DropdownItem>
-                                            
+
                                             <DropdownItem>Reset</DropdownItem>
                                         </DropdownMenu>
                                     </UncontrolledDropdown>
@@ -106,7 +114,7 @@ const Header = () => {
                                 </div>
                                 <NavItem className='icon'>
                                     <NavLink><img src={heard}></img></NavLink>
-                                    <NavLink><img src={bag}></img><div className='number_cart'><p>2</p></div></NavLink>
+                                    <NavLink ><img onClick={toggleOffcanvas} src={bag}></img><div className='number_cart'><p>{cart.length}</p></div></NavLink>
                                     <NavLink><img src={user}></img></NavLink>
                                 </NavItem>
                             </div>
@@ -141,7 +149,7 @@ const Header = () => {
                                     <NavItem>
                                         <NavLink href="/components/">Clothigs</NavLink>
                                     </NavItem>
-                                    
+
                                 </Nav>
                             </Collapse>
 
@@ -182,14 +190,45 @@ const Header = () => {
                 <div className='funtion_bottom'>
                     <NavItem className='icon'>
                         <NavLink><img src={heard}></img></NavLink>
-                        <NavLink><img src={bag}></img><div className='number_cart'><p>2</p></div></NavLink>
-                        <NavLink><img src={user}></img></NavLink>
+                        <NavLink  ><img  src={bag}></img><div className='number_cart'><p>2</p></div></NavLink>
+                        <NavLink ><img src={user}></img></NavLink>
                     </NavItem>
 
                 </div>
 
             </div>
-           
+            <Offcanvas direction={'end'} isOpen={isOpen} toggle={toggleOffcanvas}>
+                <OffcanvasHeader toggle={toggleOffcanvas}>
+                    <h3>Your cart({cart.length})</h3>
+                    <button onClick={()=>toggleOffcanvas()}><i class="fa-solid fa-xmark"></i></button>
+                </OffcanvasHeader>
+                <OffcanvasBody>
+                    <strong>
+                        <div className='body_cart'>
+                          {
+                            cart&&cart.map((item,index)=>(
+                                <ProductCart key={index} ite={item} />
+                            )
+
+                            )
+                          }
+                            
+                        </div>
+                        
+                    </strong>
+                    
+                </OffcanvasBody>
+                <div className='checkOut'>
+                                <div className='total'>
+                                    <h4>Subtotal</h4>
+                                    <h4 className='total_cost'>${cart.reduce((tong,item)=>item.cost*item.Sl+tong,0)}
+                            </h4>
+                                </div>
+                                <button>Checkout</button>
+                                <Link>View Cart</Link>
+                            </div>
+            </Offcanvas>
+
 
 
         </div>

@@ -823,3 +823,72 @@
 .Brand_menu .products{
     position: relative;
 }
+.checkOut{
+    position: fixed;
+    bottom: 0;
+    background: #ffff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 399px;
+    padding: 16px;
+    text-align: center;
+}
+.total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.total h4{
+    font-size: 16px;
+    font-family: var(--font-family);
+}
+.checkOut button{
+    width: 100%;
+    text-align: center;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    border: none;
+    background: #377E62;
+    color: #ffff;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.checkOut a{
+    text-decoration: none;
+    color: #122940;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 300;
+}
+.offcanvas-title{
+    font-family: var(--font-family);
+}
+.offcanvas-header .btn-close{
+
+    background-color: orange;
+    padding: 8px !important;
+    width: 16px;
+    margin-left: 100px !important;
+    display: none;
+}
+.offcanvas-title{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.offcanvas-title button{
+    border: none;
+    padding: 5px 13px;
+    border-radius: 99px;
+}
+.offcanvas-title button i{
+    color: #9EA8BD;
+}
+.offcanvas-body{
+    overflow-y: auto;
+}
+.offcanvas{
+    transition: 0.3s;
+}

@@ -6,8 +6,9 @@ import { Link } from 'react-router-dom';
 import { AppContext } from '../../AppContext';
 
 const CardProduct = (pros) => {
+
     const{ite}=pros;
-    const { product } = useContext(AppContext)
+    const{product,addCart,cart}=useContext(AppContext)
 
     return (
         <div className='col-xl-3 col-lg-4 col-md-6 col-6'>
@@ -46,7 +47,7 @@ const CardProduct = (pros) => {
                     <CardText>
                         USD${ite.cost}.00
                     </CardText>
-                    <Button>
+                    <Button onClick={()=>addCart(ite.id)}>
                         Add to cart
                     </Button>
                 </CardBody>

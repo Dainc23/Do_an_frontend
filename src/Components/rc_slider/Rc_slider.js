@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
+import './rc_slider.css'
 
 const RcSlider = () => {
     
@@ -16,10 +17,10 @@ const RcSlider = () => {
                 max={1000}
                 defaultValue={range}
                 onChange={onchangeRange} />
-            <div>
-                <input type="number" value={range[0]} readOnly /> $
-                -
-                <input type="number" value={range[1]} readOnly /> $
+            <div className='group_input'>
+               <div className='input'> <input type="number" value={range[0]} readOnly /> $</div>
+                <div className='line_ngan'></div>
+                <div className='input'><input type="number" value={range[1]} readOnly /> $</div>
             </div>
         </div>
     );

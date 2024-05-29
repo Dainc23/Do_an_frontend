@@ -17,7 +17,7 @@ import { AppContext } from '../../AppContext';
 
 
 const Home = () => {
-    const { product } = useContext(AppContext)
+    const { product,cart } = useContext(AppContext)
     console.log(product)
     const responsive = {
         superLargeDesktop: {

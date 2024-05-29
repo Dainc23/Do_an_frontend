@@ -14,12 +14,17 @@ import RcSlider from '../../Components/rc_slider/Rc_slider';
 
 
 
-import CardProduct from '../../Components/card_product/Card_product';
+
 import { AppContext } from '../../AppContext';
 import { useContext } from 'react';
+import NumberPage from '../../Components/number_page/Number_page';
+import CardProductPage from '../../Components/cardProduct_page/CardProduct_page';
 
 const Products = () => {
     const { product } = useContext(AppContext)
+
+
+
     return (
         <div>
             <Header />
@@ -37,7 +42,8 @@ const Products = () => {
                             </div>
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
-                                    Options
+                                    Sort by: Default sorting
+                                    <i class="fa-solid fa-angle-down"></i>
                                 </DropdownToggle>
                                 <DropdownMenu right>
                                     <DropdownItem>Option 1</DropdownItem>
@@ -58,25 +64,28 @@ const Products = () => {
                             <div className='Box'>
                                 <h3>Catagories</h3>
                                 <div className='kind'>
-                                    <Link><h4>Tops</h4> <h4>[12]</h4></Link>
-                                    <Link><h4>Tops</h4> <h4>[12]</h4></Link>
-                                    <Link><h4>Tops</h4> <h4>[12]</h4></Link>
-                                    <Link><h4>Tops</h4> <h4>[12]</h4></Link>
-                                    <Link><h4>Tops</h4> <h4>[12]</h4></Link>
+                                    <Link><h4 className='kind_name'>Tops</h4> <h4>[12]</h4></Link>
+                                    <Link><h4 className='kind_name'>T- shirt & polo</h4> <h4>[5]</h4></Link>
+                                    <Link><h4 className='kind_name'>Shoes</h4> <h4>[9]</h4></Link>
+                                    <Link><h4 className='kind_name'>Bags</h4> <h4>[10]</h4></Link>
+                                    <Link><h4 className='kind_name'>Jean</h4> <h4>[2]</h4></Link>
+                                    <Link><h4 className='kind_name'>Hats</h4> <h4>[9]</h4></Link>
+                                    <Link><h4 className='kind_name'>Coatch & jacket</h4> <h4>[5]</h4></Link>
+                                    <Link><h4 className='kind_name'>Accessories</h4> <h4>[7]</h4></Link>
                                 </div>
 
                             </div>
                             <div className='Box'>
                                 <h3>PRICE</h3>
                                 <div className='kind'>
-                                   <RcSlider />
+                                    <RcSlider />
 
                                 </div>
 
                             </div>
                             <div className='Box'>
                                 <h3>Size</h3>
-                                <div className='kind'>
+                                <div className='button_size'>
                                     <button>Xs</button>
                                     <button>S</button>
                                     <button>M</button>
@@ -87,31 +96,46 @@ const Products = () => {
                                 </div>
 
                             </div>
-                            <div className='Box'>
+                            <div className='Box brand'>
                                 <h3>Brand</h3>
-                                <div className='kind'>
+                                <div className='checkbox'>
+                                    <div className='group_check'>
 
-                                    <input type={'checkbox'}></input>
-                                    <label>Elle</label>
-                                    <input type={'checkbox'}></input>
-                                    <label>Elle</label>
-                                    <input type={'checkbox'}></input>
-                                    <label>Elle</label>
-                                    <input type={'checkbox'}></input>
-                                    <label>Elle</label>
-                                    <input type={'checkbox'}></input>
-                                    <label>Elle</label>
+
+                                        <input id='Elle' type={'checkbox'}></input>
+                                        <label for='Elle'>Elle</label>
+                                        <input id='h&M' type={'checkbox'}></input>
+                                        <label for='h&M'>h&M</label>
+
+                                    </div>
+                                    <div className='group_check'>
+
+
+                                        <input id='Genith' type={'checkbox'}></input>
+                                        <label for='Genith' >Genith</label>
+                                        <input id='Vogue' type={'checkbox'}></input>
+                                        <label for='Vogue'>Vogue</label>
+
+                                    </div>
+                                    <div className='group_check'>
+
+
+                                        <input id='Yody' type={'checkbox'}></input>
+                                        <label for='Yody'>Yody</label>
+                                        <input id='Marni' type={'checkbox'}></input>
+                                        <label for='Marni'>Marni</label>
+
+                                    </div>
+
                                 </div>
 
                             </div>
                         </div>
                         <div className='products row'>
                             
-                                 {product != null && product.map((item, index) => (
-                                    <CardProduct ite={item} key={index}/>
-                                ))}
+                            <NumberPage />
 
-                            
+
 
                         </div>
                     </div>
