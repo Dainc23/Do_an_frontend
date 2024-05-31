@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../../Components/header/Header';
 import Footer from '../../Components/footer/Footer';
 import Breadcrumbs from '../../Components/breadcrumb/Breadcrumbs';
@@ -14,10 +14,12 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import axios from 'axios';
 import CardProduct from '../../Components/card_product/Card_product';
+import avatar from '../../Img/avarta.jpg'
+import CardReviewPagedetail from '../../Components/card_review_Pagedetail/Card_review_Pagedetail';
 
 
 const ProductDetail = (pros) => {
-    const {ite}=pros;
+    const { ite } = pros;
     const [img, setImg] = useState(img_product)
 
     const changeImg = (e) => {
@@ -164,7 +166,7 @@ const ProductDetail = (pros) => {
                         <Tab><p>Reviews <span>123</span></p></Tab>
                     </TabList>
 
-                    <TabPanel>
+                    <TabPanel className='Description'>
                         <h5>Overview:</h5>
                         <p>Short skirt with round neck has cotton double-layered, sexy figure, off-shoulder design, long-sleeve design, flared sleeves
                             with pink and white stripes pattern.</p>
@@ -213,7 +215,7 @@ const ProductDetail = (pros) => {
                         </div>
                         <p className='Please_note'>Please note: The images shown may include colors that are not available.</p>
                     </TabPanel>
-                    <TabPanel>
+                    <TabPanel className='Additional_information'> 
                         <p>Round neck dress 85cm long, dear customers. The material of the product is soft and beautiful, and the nose is pretty standard, only a little extra. The 2-layer dress is super beautiful, with no wrinkles, no ruffles. The shop's women's goods are free-size, women's height m65 52kg in weight, it's beautiful. Designed with the same
                             color as the photo: Female: height m65, weight 48kg, please wear it well.</p>
                         <div className='list_style'>
@@ -245,29 +247,97 @@ const ProductDetail = (pros) => {
                                 <p className='tilte_list'>Other info</p>
                                 <p className='content_list'>-</p>
                             </div>
-                            <p>Guarantee product as photo, return products in 7 days, fast service, quality is number 1.
+                            <p>Guarantee product as photo, return products in 7 days, fast service, quality is number 1.<br />
                                 If you have any questions, don't hesitate to reach out to our team.</p>
                         </div>
                     </TabPanel>
-                    <TabPanel>
-                        <h2>review</h2>
+                    <TabPanel className='Reviews'>
+                        <div className='review'>
+                            <div className='Customer_reviews'>
+                                <h1>Customer reviews</h1>
+                                <div className='select_group'>
+                                    <select>
+                                        <option>Recent reviews</option>
+                                        <option>Latest reviews</option>
+                                        <option>Yesterday reviews</option>
+                                    </select>
+                                    <select>
+                                        <option>Show 5 start only</option>
+                                        <option>Show 4 start only</option>
+                                        <option>Show 3 start only</option>
+                                    </select>
+                                </div>
+                                <CardReviewPagedetail />
+                                <CardReviewPagedetail />
+                                <CardReviewPagedetail />
+                                <CardReviewPagedetail />
+                                <CardReviewPagedetail />
+                                
+
+
+                            </div>
+                            <div className='Average_score'>
+                                <div className='tilteAndstart'>
+                                    <h1>Average score</h1>
+                                    <div className='start'>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div className='comment'>
+                                    <div className='comment_start'>
+                                        <p>Your ratings:</p>
+                                    <div className='start'>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    </div>
+                                    <div className='Group_input'>
+                                        <form>
+                                        <div className='full_nameAndemai_ldress'>
+                                            <div className='full_name'>
+                                                <label for='full_name' >Full Name</label>
+                                                <input id='full_name' placeholder='Enter your full name'></input>
+                                            </div>
+                                            <div className='emai_ldress'>
+                                                <label for='emai_ldress' >Email Address</label>
+                                                <input id='emai_ldress' placeholder='Enter your email address'></input>
+                                            </div>
+                                        </div>
+                                        <div className='your_Review'>
+                                            <label for='your_Review'>Your Review</label>
+                                            <textarea id='your_Review' placeholder='Write your review'></textarea>
+                                        </div>
+                                        <button>Submit Review</button>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </TabPanel>
                 </Tabs>
             </div>
             <section className='Discover_our_featured_products'>
-                    <div className='container'>
-                        <h1>Discover our featured products</h1>
+                <div className='container'>
+                    <h1>Discover our featured products</h1>
 
-                        <Carousel responsive={responsive}
-                            autoPlaySpeed={5000}
-                            autoPlay={false}
-                            showDots={true}>
-                            {product != null && product.map((item, index) => (
-                                <CardProduct ite={item} key={index} />
-                            ))}
-                        </Carousel>
-                    </div>
-                </section>
+                    <Carousel responsive={responsive}
+                        autoPlaySpeed={5000}
+                        autoPlay={false}
+                        showDots={true}>
+                        {product != null && product.map((item, index) => (
+                            <CardProduct ite={item} key={index} />
+                        ))}
+                    </Carousel>
+                </div>
+            </section>
 
 
 
