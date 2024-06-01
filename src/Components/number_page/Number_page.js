@@ -1,31 +1,41 @@
 import React, { useContext, useEffect, useState } from 'react';
-
 import ReactPaginate from 'react-paginate';
 import { AppContext } from '../../AppContext';
 import CardProductPage from '../cardProduct_page/CardProduct_page';
-const NumberPage = () => {
-    const itemsPerPage=9;
-    const { product } = useContext(AppContext)
+
+const Items = ({ currentItems }) => {
+    return (
+        <>
+            {currentItems &&
+                currentItems.map((item, index) => (
+                    <CardProductPage key={index} ite={item} />
+                ))}
+        </>
+    );
+};
+
+const PaginatedItems = ({ itemsPerPage }) => {
+    const { product } = useContext(AppContext);
     const [itemOffset, setItemOffset] = useState(0);
+
+    // Calculate the current items to display
     const endOffset = itemOffset + itemsPerPage;
-    console.log(`Đang tải các mục từ ${itemOffset} đến ${endOffset}`);
-    const currentItems = (product != null && product.slice(itemOffset, endOffset));
-    const pageCount = Math.ceil((product != null &&product.length) / itemsPerPage);
+    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+    const currentItems = product !=null &&product.slice(itemOffset, endOffset);
+    const pageCount = Math.ceil(product !=null &&product.length / itemsPerPage);
+
+    // Handle page click
     const handlePageClick = (event) => {
         const newOffset = (event.selected * itemsPerPage) % product.length;
         console.log(
-          `Người dùng yêu cầu trang số ${event.selected}, đó là phần bù ${newOffset}`
+            `User requested page number ${event.selected}, which is offset ${newOffset}`
         );
         setItemOffset(newOffset);
-      };
+    };
+
     return (
-        <div>
-            {product != null && product.map((item, index) => (
-                                <CardProductPage ite={item} key={index} currentItems={currentItems} />
-                            ))}
-            
-
-
+        <div className='row'>
+            <Items currentItems={currentItems} />
             <ReactPaginate
                 breakLabel="..."
                 nextLabel="next >"
@@ -35,16 +45,23 @@ const NumberPage = () => {
                 previousLabel="< previous"
                 renderOnZeroPageCount={null}
                 containerClassName='pagination'
-                pageClassName='page-item'
-                pageLinkClassName='page-link'
-                previousClassName='page-item '
+                breakClassName='page-item'
+                breakLinkClassName='page-link'
+                previousClassName='page-item'
                 previousLinkClassName='page-link'
                 nextClassName='page-item'
                 nextLinkClassName='page-link'
+                pageClassName='page-item'
+                pageLinkClassName='page-link'
             />
-
         </div>
     );
-}
+};
+
+const NumberPage = () => {
+    return (
+        <PaginatedItems itemsPerPage={9} />
+    );
+};
 
 export default NumberPage;
