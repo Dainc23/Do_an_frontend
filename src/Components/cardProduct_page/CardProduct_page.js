@@ -6,6 +6,7 @@ import img_product from '../../Img/product.jpg'
 import { Link } from 'react-router-dom';
 const CardProductPage = (pros) => {
     const{ite}=pros;
+    const{addCart}=useContext(AppContext)
     
     return (
         <div className='col-xl-4 col-lg-4 col-md-6 col-6'>
@@ -44,7 +45,7 @@ const CardProductPage = (pros) => {
                 <CardText>
                     USD${ite.cost}.00
                 </CardText>
-                <Button>
+                <Button onClick={()=>addCart(ite.id)}>
                     Add to cart
                 </Button>
             </CardBody>

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import { AppContext } from '../../AppContext';
 import CardProductPage from '../cardProduct_page/CardProduct_page';
+import './number_page.css'
 
 const Items = ({ currentItems }) => {
     return (
@@ -21,8 +22,8 @@ const PaginatedItems = ({ itemsPerPage }) => {
     // Calculate the current items to display
     const endOffset = itemOffset + itemsPerPage;
     console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-    const currentItems = product !=null &&product.slice(itemOffset, endOffset);
-    const pageCount = Math.ceil(product !=null &&product.length / itemsPerPage);
+    const currentItems = product != null && product.slice(itemOffset, endOffset);
+    const pageCount = Math.ceil(product != null && product.length / itemsPerPage);
 
     // Handle page click
     const handlePageClick = (event) => {
@@ -38,20 +39,19 @@ const PaginatedItems = ({ itemsPerPage }) => {
             <Items currentItems={currentItems} />
             <ReactPaginate
                 breakLabel="..."
-                nextLabel="next >"
+                nextLabel={<i class="fa-solid fa-angle-right"></i>}
                 onPageChange={handlePageClick}
                 pageRangeDisplayed={5}
                 pageCount={pageCount}
-                previousLabel="< previous"
                 renderOnZeroPageCount={null}
                 containerClassName='pagination'
                 breakClassName='page-item'
                 breakLinkClassName='page-link'
-                previousClassName='page-item'
+                previousClassName='prev'
                 previousLinkClassName='page-link'
                 nextClassName='page-item'
                 nextLinkClassName='page-link'
-                pageClassName='page-item'
+                pageClassName='page-item active'
                 pageLinkClassName='page-link'
             />
         </div>

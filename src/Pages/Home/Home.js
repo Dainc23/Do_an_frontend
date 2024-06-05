@@ -8,11 +8,12 @@ import { Button, NavItem } from 'reactstrap';
 import img_banner from '../../Img/banner.png'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import '../../Components/testimonial_card/Testimonial'
 import Testimonial from '../../Components/testimonial_card/Testimonial';
 import BlogCard from '../../Components/blog_card/blog_card';
 import { AppContext } from '../../AppContext';
+import ButtonGroup from '../../Components/customButton_carousel/ButtonGroup';
 
 
 
@@ -92,23 +93,27 @@ const Home = () => {
                             <h3>The oversize favorite <br /> of all time</h3>
                             <p>Take a perfect shape after experiencing our products.
                                 <br /> Let’s try it now!</p>
-                            <Button>Shop now</Button>
+                            <Button><Link to='/Products'>Shop now</Link></Button>
                         </div>
                         <div className='banner2'>
                             <h3>Collection made for <br /> you design</h3>
                             <p>All the procucts in our collection are handcrafted with <br /> great care and precision.</p>
-                            <Button>Shop now</Button>
+                            <Button><Link to='/Products'>Shop now</Link></Button>
                         </div>
                     </div>
                 </section>
                 <section className='Discover_our_featured_products'>
                     <div className='container'>
                         <h1>Discover our featured products</h1>
+                        
 
                         <Carousel responsive={responsive}
                             autoPlaySpeed={5000}
                             autoPlay={false}
-                            showDots={true}>
+                            showDots={true}
+                            arrows={false}
+                            customButtonGroup={<ButtonGroup />}
+                            renderButtonGroupOutside={true}>
                             {product != null && product.map((item, index) => (
                                 <CardProduct ite={item} key={index} />
                             ))}
@@ -143,6 +148,7 @@ const Home = () => {
                 <section className='Clientloveus_welovethem'>
                     <div className='container'>
                         <h1>Client love us & we love them</h1>
+                        
                         <Carousel
                             responsive={responsive1}
                             showDots={true}

@@ -86,11 +86,7 @@ const Header = () => {
                                             <p className='products'>Products</p>
                                         </Link>
                                     </NavItem>
-                                    <NavItem>
-                                        <NavLink href="https://github.com/reactstrap/reactstrap">
-                                            <p>Blog</p>
-                                        </NavLink>
-                                    </NavItem>
+                                    
                                     <UncontrolledDropdown nav inNavbar>
                                         <DropdownToggle nav caret>
                                             <p>Pages</p>
@@ -98,11 +94,16 @@ const Header = () => {
                                         </DropdownToggle>
                                         <DropdownMenu right>
                                             <DropdownItem><NavLink to='/About'>About us</NavLink></DropdownItem>
-                                            <DropdownItem><NavLink to='/Contact'>Contact</NavLink></DropdownItem>
+                                            <DropdownItem><NavLink >Blog</NavLink></DropdownItem>
 
-                                            <DropdownItem>Reset</DropdownItem>
+                                            
                                         </DropdownMenu>
                                     </UncontrolledDropdown>
+                                    <NavItem>
+                                        <NavLink to='/Contact' >
+                                            <p>Contact</p>
+                                        </NavLink>
+                                    </NavItem>
                                 </Nav>
                             </div>
                             <div className='header_funtion'>

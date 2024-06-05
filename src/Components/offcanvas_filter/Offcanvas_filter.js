@@ -1,74 +1,20 @@
-
-import Header from '../../Components/header/Header';
-import Footer from '../../Components/footer/Footer';
-import './products.css';
-import Breadcrumbs from '../../Components/breadcrumb/Breadcrumbs';
-import content_banner from '../../Img/Content_banner_productsPage.png'
-import { DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown } from 'reactstrap';
-import grid_3_icon from '../../Img/gird-3.svg';
-import list_icon from '../../Img/List.svg';
+import React from 'react';
+import { Offcanvas, OffcanvasBody, OffcanvasHeader } from 'reactstrap';
+import './offcanvas_filter.css'
 import { Link } from 'react-router-dom';
-
 import 'rc-slider/assets/index.css';
 import RcSlider from '../../Components/rc_slider/Rc_slider';
-
-
-
-
-import { AppContext } from '../../AppContext';
-import { useContext, useState } from 'react';
-import NumberPage from '../../Components/number_page/Number_page';
-import CardProductPage from '../../Components/cardProduct_page/CardProduct_page';
-import OffcanvasFilter from '../../Components/offcanvas_filter/Offcanvas_filter';
-
-const Products = () => {
-    const { product } = useContext(AppContext)
-    const [isOpen1, setIsOpen1] = useState(false);
-
-    const toggleOffcanvas1 = () => {
-        setIsOpen1(!isOpen1);
-    };
-
-
-
+const OffcanvasFilter = (props) => {
+    const{toge,open}=props;
     return (
-        <div>
 
-            <Header />
-            <div className='Breadcrumb container'><Breadcrumbs /></div>
-            <div className='banner_products container'>
-                <img src={content_banner}></img>
-            </div>
-            <section className='all_products'>
-                <div className='container'>
-                    <div className='tilte_funtionTop'>
-                        <div className='tilte_With_dropdown'>
-                            <div className='tilte'>
-                                <h1 >All Products</h1>
-                                <h3 className='numberOfproduct'>[12]</h3>
-                            </div>
-                            <UncontrolledDropdown nav inNavbar>
-                                <DropdownToggle nav caret>
-                                    Sort by: Default sorting
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </DropdownToggle>
-                                <DropdownMenu right>
-                                    <DropdownItem>Option 1</DropdownItem>
-                                    <DropdownItem>Option 2</DropdownItem>
-                                    <DropdownItem>Reset</DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-
-                        </div>
-                        <div className='setting_colum'>
-                            <button><img src={grid_3_icon}></img></button>
-                            <button><img src={list_icon}></img></button>
-                        </div>
-
-                    </div>
-                    <div className='filter_products'>
-                        <button onClick={toggleOffcanvas1} className='btn_filter'><i class="fa-solid fa-filter"></i>Filter</button>
-                        <div className='filter'>
+        <Offcanvas isOpen={open} toggle={toge}>
+            <OffcanvasHeader toggle={toge}>
+                Filler
+            </OffcanvasHeader>
+            <OffcanvasBody>
+                <strong>
+                <div className='filter'>
                             <div className='Box'>
                                 <h3>Catagories</h3>
                                 <div className='kind'>
@@ -139,22 +85,11 @@ const Products = () => {
 
                             </div>
                         </div>
-                        <div className='products row'>
+                </strong>
+            </OffcanvasBody>
+        </Offcanvas>
 
-                            <NumberPage />
-
-
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <OffcanvasFilter open={isOpen1} toge={toggleOffcanvas1} />
-
-
-            <Footer />
-        </div>
     );
 }
 
-export default Products;
+export default OffcanvasFilter;

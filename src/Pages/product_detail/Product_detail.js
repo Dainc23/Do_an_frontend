@@ -16,7 +16,7 @@ import axios from 'axios';
 import CardProduct from '../../Components/card_product/Card_product';
 import avatar from '../../Img/avarta.jpg'
 import CardReviewPagedetail from '../../Components/card_review_Pagedetail/Card_review_Pagedetail';
-
+import ButtonGroup from '../../Components/customButton_carousel/ButtonGroup';
 
 const ProductDetail = (pros) => {
     const { ite } = pros;
@@ -32,6 +32,16 @@ const ProductDetail = (pros) => {
 
         }
     }
+    const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
+        const { carouselState: { currentSlide } } = rest;
+        return (
+          <div className="carousel-button-group"> // remember to give it position:absolute
+            <Button className={currentSlide === 0 ? 'active' : ''} onClick={() => previous()} />
+            
+            <Button onClick={() => goToSlide(currentSlide + 1)}> Go to any slide </Button>
+          </div>
+        );
+      }
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -142,6 +152,7 @@ const ProductDetail = (pros) => {
                                 <Link>Clothing</Link>
                                 <Link>Women</Link>
                                 <Link>Hot</Link>
+                                
                                 <Link>Clothing</Link>
                                 <Link> Dresses</Link>
                             </div>
@@ -324,14 +335,17 @@ const ProductDetail = (pros) => {
                     </TabPanel>
                 </Tabs>
             </div>
-            <section className='Discover_our_featured_products'>
+            <section className='Related_products'>
                 <div className='container'>
-                    <h1>Discover our featured products</h1>
+                    <h1>Related products</h1>
 
                     <Carousel responsive={responsive}
                         autoPlaySpeed={5000}
                         autoPlay={false}
-                        showDots={true}>
+                        showDots={true}
+                        customButtonGroup={<ButtonGroup />}
+                        renderButtonGroupOutside={true}
+                        >
                         {product != null && product.map((item, index) => (
                             <CardProduct ite={item} key={index} />
                         ))}

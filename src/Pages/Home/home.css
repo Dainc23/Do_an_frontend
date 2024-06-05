@@ -1,5 +1,5 @@
 .body {
-    margin-top: 126px;
+    margin-top: 113px;
 }
 
 .row .col-3 {
@@ -609,4 +609,6 @@
         text-transform: uppercase;
         padding: 2px 4px;
     }
-}
+    .carousel-button-group.container{
+        display: none;}
+    }

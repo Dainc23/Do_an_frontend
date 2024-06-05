@@ -147,7 +147,7 @@
 .tilte_funtionTop{
     padding: 30px 0 !important;
 }
-.tilte{
+.tilte_With_dropdown .tilte{
     align-items: end;
     margin-right: 160px;
 }
@@ -173,5 +173,69 @@
 .Box.brand{
     border-bottom: none;
 }
+.filter_products .btn_filter{
+    display: none;
+}
+@media only screen and (max-width: 400px) {
+    .filter{
+        display: none;
+    }
+    .tilte h1{
+        font-size: 18px;
+    }
+    .tilte_With_dropdown .tilte{
+        width: 200px;
+        display: flex;
+        align-items: center;
+        margin-right:50px ;
+    }
+    .tilte_With_dropdown{
+        width: 300px;
+        flex-direction:column;
+        align-items: start;
+        height: auto;
+    }
+    .tilte_funtionTop{
+        display: flex;
+    }
+    .dropdown .dropdown-toggle{
+        font-size: 14px;
+    }
+    .filter_products{
+        flex-direction: column;
+    }
+    .filter_products .btn_filter{
+        display: block;
+        text-align: center;
+        background: #213549;
+        border-radius: 10px;
+        border: none;
+        padding: 8px 0px;
+        margin-bottom: 30px;
+        color: #ffff;
+        font-family: var(--font-family);
+    }
+    .filter_products .btn_filter i{
+        margin-right: 5px;
+    }
+    .all_products .products {
+        height: auto;
+        width: 100%;
+    }
+    .banner_products {
+        background-image: url(../../Img/Banner_products_page.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 200px;
+        text-align: center;
+        padding: 80px 0;
+        background-position: center;
+        
+    }
+    .banner_products img{
+        width: 320px;
+    }
+}
+
 
 
