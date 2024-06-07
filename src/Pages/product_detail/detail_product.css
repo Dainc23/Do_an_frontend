@@ -700,3 +700,6 @@ p.cost_close {
     font-family: var(--font-family);
     font-size: 40px;
 }
+.Related_products .react-multiple-carousel__arrow{
+    display: none;
+}

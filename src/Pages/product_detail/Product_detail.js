@@ -32,16 +32,7 @@ const ProductDetail = (pros) => {
 
         }
     }
-    const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
-        const { carouselState: { currentSlide } } = rest;
-        return (
-          <div className="carousel-button-group"> // remember to give it position:absolute
-            <Button className={currentSlide === 0 ? 'active' : ''} onClick={() => previous()} />
-            
-            <Button onClick={() => goToSlide(currentSlide + 1)}> Go to any slide </Button>
-          </div>
-        );
-      }
+    
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -343,8 +334,10 @@ const ProductDetail = (pros) => {
                         autoPlaySpeed={5000}
                         autoPlay={false}
                         showDots={true}
-                        customButtonGroup={<ButtonGroup />}
+                        customButtonGroup={<ButtonGroup/>}
                         renderButtonGroupOutside={true}
+                        arrows={false}
+                        
                         >
                         {product != null && product.map((item, index) => (
                             <CardProduct ite={item} key={index} />
