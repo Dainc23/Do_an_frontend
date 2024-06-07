@@ -74,10 +74,10 @@ const Header = () => {
                                             <i class="fa-solid fa-angle-down"></i>
                                         </DropdownToggle>
                                         <DropdownMenu right>
-                                            <DropdownItem>Outlet</DropdownItem>
-                                            <DropdownItem>Footwear</DropdownItem>
+                                            <DropdownItem><NavLink>Outlet</NavLink></DropdownItem>
+                                            <DropdownItem><NavLink>Footwear</NavLink></DropdownItem>
 
-                                            <DropdownItem>Clothigs</DropdownItem>
+                                            <DropdownItem><NavLink>Clothigs</NavLink></DropdownItem>
                                         </DropdownMenu>
                                     </UncontrolledDropdown>
                                     <NavItem>
@@ -93,7 +93,7 @@ const Header = () => {
                                             <i class="fa-solid fa-angle-down"></i>
                                         </DropdownToggle>
                                         <DropdownMenu right>
-                                            <DropdownItem><NavLink to='/About'>About us</NavLink></DropdownItem>
+                                            <DropdownItem><NavLink >About us</NavLink></DropdownItem>
                                             <DropdownItem><NavLink >Blog</NavLink></DropdownItem>
 
                                             

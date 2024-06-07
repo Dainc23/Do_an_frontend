@@ -130,19 +130,19 @@ const Home = () => {
                                 <p>Day</p>
                             </div>
                             <div className='hours'>
-                                <div className='number'><h3>05</h3></div>
+                                <div className='number'><h3>12</h3></div>
                                 <p>Hours</p>
                             </div>
                             <div className='minutes'>
-                                <div className='number'><h3>05</h3></div>
+                                <div className='number'><h3>35</h3></div>
                                 <p>Minutes</p>
                             </div>
                             <div className='seconds'>
-                                <div className='number'><h3>05</h3></div>
+                                <div className='number'><h3>25</h3></div>
                                 <p>Seconds</p>
                             </div>
                         </div>
-                        <Button>Shop now</Button>
+                        <Button to='/products'>Shop now</Button>
                     </div>
                 </section>
                 <section className='Clientloveus_welovethem'>
