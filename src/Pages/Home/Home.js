@@ -142,7 +142,7 @@ const Home = () => {
                                 <p>Seconds</p>
                             </div>
                         </div>
-                        <Button to='/products'>Shop now</Button>
+                        <Button >Shop now</Button>
                     </div>
                 </section>
                 <section className='Clientloveus_welovethem'>

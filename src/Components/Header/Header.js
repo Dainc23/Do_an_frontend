@@ -191,7 +191,7 @@ const Header = () => {
                 <div className='funtion_bottom'>
                     <NavItem className='icon'>
                         <NavLink><img src={heard}></img></NavLink>
-                        <NavLink  ><img  src={bag}></img><div className='number_cart'><p>2</p></div></NavLink>
+                        <NavLink  ><img onClick={toggleOffcanvas} src={bag}></img><div className='number_cart'><p>2</p></div></NavLink>
                         <NavLink ><img src={user}></img></NavLink>
                     </NavItem>
 
