@@ -20,7 +20,7 @@ const App = () => {
                 <Router>
                     
                     <Routes>
-                        <Route path='/' element={<Home />} />
+                        <Route path='dainc23.github.io/frontend-home/' element={<Home />} />
                         <Route path='/Contact' element={<Contact />} />
                         <Route path='/*' element={<About_us />} />
                         <Route path='/Products' element={<Products />} />

@@ -80,12 +80,12 @@ const ProductDetail = (pros) => {
             <div className='breadcrumbs container'> <Breadcrumbs /></div>
             <div className='infor_detail_product container'>
                 <div className='img'>
-                    <img className='main_img' src={img}></img>
+                    <img alt='product' className='main_img' src={img}></img>
                     <div className='sub_img'>
-                        <img className='sub' onClick={changeImg} id="1" src={img_product}></img>
-                        <img className='sub' onClick={changeImg} id="2" src={img_product3}></img>
-                        <img className='sub' onClick={changeImg} id="3" src={img_product2}></img>
-                        <img className='sub' onClick={changeImg} id="4" src={img_product3}></img>
+                        <img alt='product' className='sub' onClick={changeImg} id="1" src={img_product}></img>
+                        <img alt='product' className='sub' onClick={changeImg} id="2" src={img_product3}></img>
+                        <img alt='product' className='sub' onClick={changeImg} id="3" src={img_product2}></img>
+                        <img alt='product' className='sub' onClick={changeImg} id="4" src={img_product3}></img>
                     </div>
                 </div>
                 <div className='content_infor'>

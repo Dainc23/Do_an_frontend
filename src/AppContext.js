@@ -4,7 +4,7 @@ export const AppContext = createContext({})
 export function AppProvider({ children }) {
     const [product, setProduct] = useState(null)
     const [cart, serCart] = useState([])
-    function getData(currentItems) {
+    function getData() {
         const url = `https://661b930865444945d04fca10.mockapi.io/ps`
         axios.get(url)
             .then(function (res) {

@@ -45,7 +45,7 @@ const Header = () => {
                                 </div>
                                 <div className='line'></div>
                                 <div className='langues'>
-                                    <img src={img1}></img>
+                                    <img alt='flag' src={img1}></img>
                                     <p>English</p>
                                     <Link><i class="fa-solid fa-angle-down"></i></Link>
 
@@ -61,8 +61,8 @@ const Header = () => {
                         <Navbar >
                             <div className='Brand_menu'>
                                 <Button onClick={toggleSelect} color="link" className='bar'><i class="fa-solid fa-bars-staggered"></i></Button>
-                                <NavbarBrand href="/"><div className='logo'><img src={logo}></img></div></NavbarBrand>
-                                <Button color="link" className='bar_search'><img src={search1} /></Button>
+                                <NavbarBrand href="/"><div className='logo'><img alt='logo' src={logo}></img></div></NavbarBrand>
+                                <Button color="link" className='bar_search'><img alt='icon' src={search1} /></Button>
                                 <Nav className="me-auto" >
                                     <NavItem>
                                         <NavLink to='/' href="/components/"><p>Home</p></NavLink>
@@ -73,7 +73,7 @@ const Header = () => {
                                             <p>Shop</p>
                                             <i class="fa-solid fa-angle-down"></i>
                                         </DropdownToggle>
-                                        <DropdownMenu right>
+                                        <DropdownMenu end>
                                             <DropdownItem><NavLink>Outlet</NavLink></DropdownItem>
                                             <DropdownItem><NavLink>Footwear</NavLink></DropdownItem>
 
@@ -92,7 +92,7 @@ const Header = () => {
                                             <p>Pages</p>
                                             <i class="fa-solid fa-angle-down"></i>
                                         </DropdownToggle>
-                                        <DropdownMenu right>
+                                        <DropdownMenu end>
                                             <DropdownItem><NavLink >About us</NavLink></DropdownItem>
                                             <DropdownItem><NavLink >Blog</NavLink></DropdownItem>
 
@@ -110,13 +110,13 @@ const Header = () => {
                                 <div>
                                     <div className='input_search'>
                                         <input placeholder='Search...'></input>
-                                        <img src={search}></img>
+                                        <img alt='icon' src={search}></img>
                                     </div>
                                 </div>
                                 <NavItem className='icon'>
-                                    <NavLink><img src={heard}></img></NavLink>
-                                    <NavLink ><img onClick={toggleOffcanvas} src={bag}></img><div className='number_cart'><p>{cart.length}</p></div></NavLink>
-                                    <NavLink><img src={user}></img></NavLink>
+                                    <NavLink><img alt='icon' src={heard}></img></NavLink>
+                                    <NavLink ><img alt='icon' onClick={toggleOffcanvas} src={bag}></img><div className='number_cart'><p>{cart.length}</p></div></NavLink>
+                                    <NavLink><img alt='icon' src={user}></img></NavLink>
                                 </NavItem>
                             </div>
 
@@ -190,9 +190,9 @@ const Header = () => {
                 </div>
                 <div className='funtion_bottom'>
                     <NavItem className='icon'>
-                        <NavLink><img src={heard}></img></NavLink>
-                        <NavLink  ><img onClick={toggleOffcanvas} src={bag}></img><div className='number_cart'><p>2</p></div></NavLink>
-                        <NavLink ><img src={user}></img></NavLink>
+                        <NavLink><img alt='icon' src={heard}></img></NavLink>
+                        <NavLink  ><img alt='icon' onClick={toggleOffcanvas} src={bag}></img><div className='number_cart'><p>2</p></div></NavLink>
+                        <NavLink ><img alt='icon' src={user}></img></NavLink>
                     </NavItem>
 
                 </div>

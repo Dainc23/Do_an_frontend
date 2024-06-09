@@ -7,7 +7,7 @@ const CardReviewPagedetail = () => {
             
             <div className='Customer_reviews_card'>
                                     <div className='infor_Customer'>
-                                        <div className='anh'> <img src={avatar}></img></div>
+                                        <div className='anh'> <img alt='avarta' src={avatar}></img></div>
                                         <div className='name_Customer'>
                                             <div className='nameAndstart'>
                                                <p className='name_user'> Julian Schofield</p>
