@@ -1,5 +1,5 @@
 
-import Header from '../../Components/header/Header';
+import Header from '../../Components/header1/Header';
 import Footer from '../../Components/footer/Footer';
 import './products.css';
 import Breadcrumbs from '../../Components/breadcrumb/Breadcrumbs';

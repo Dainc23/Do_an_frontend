@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../../Components/header/Header';
+import Header from '../../Components/header1/Header';
 import Footer from '../../Components/footer/Footer';
 import Breadcrumbs from '../../Components/breadcrumb/Breadcrumbs';
 import './detail_product.css'
