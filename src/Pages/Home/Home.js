@@ -3,7 +3,7 @@ import Header from '../../Components/header1/Header';
 import Footer from '../../Components/footer/Footer';
 import CardProduct from '../../Components/card_product/Card_product';
 import './home.css';
-import axios from 'axios';
+
 import { Button, NavItem } from 'reactstrap';
 import img_banner from '../../Img/banner.png'
 import Carousel from 'react-multi-carousel';
