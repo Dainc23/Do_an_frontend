@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "homepage": "https://dainc23.github.io/frontend-home/",
+  "homepage": "https://dainc23.github.io/frontend/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -10,7 +10,6 @@
     "aos": "^2.3.4",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
-    "gh-pages": "^6.1.1",
     "rc-slider": "^10.6.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -47,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
