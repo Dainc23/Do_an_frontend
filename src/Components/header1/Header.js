@@ -10,11 +10,11 @@ import heard from '../../Img/heard-icon.svg'
 import user from '../../Img/user-icon.svg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../style.css'
-import { Button, Collapse, DropdownItem, DropdownMenu, DropdownToggle, Nav, NavItem, Navbar, NavbarBrand, NavbarText, NavbarToggler, Offcanvas, OffcanvasBody, OffcanvasHeader, UncontrolledDropdown } from 'reactstrap';
+import { Button, Collapse, DropdownItem, DropdownMenu, DropdownToggle, Nav, NavItem, Navbar, NavbarBrand,  NavbarToggler, Offcanvas, OffcanvasBody, OffcanvasHeader, UncontrolledDropdown } from 'reactstrap';
 import ProductCart from '../product_cart/Product_cart';
 import { AppContext } from '../../AppContext';
 const Header = () => {
-    const{product,addCart,cart}=useContext(AppContext)
+    const{cart}=useContext(AppContext)
     const [collapsed, setCollapsed] = useState(true);
     const toggleNavbar = () => setCollapsed(!collapsed)
     const [collapsed1, setCollapsed1] = useState(true);
@@ -115,7 +115,7 @@ const Header = () => {
                                 </div>
                                 <NavItem className='icon'>
                                     <NavLink><img alt='icon' src={heard}></img></NavLink>
-                                    <NavLink ><img alt='icon' onClick={toggleOffcanvas} src={bag}></img><div className='number_cart'><p>{cart.length}</p></div></NavLink>
+                                    <NavLink ><img alt='icon' onClick={toggleOffcanvas} src={bag}></img><div className='number_cart'><p>{cart&&cart.length}</p></div></NavLink>
                                     <NavLink><img alt='icon' src={user}></img></NavLink>
                                 </NavItem>
                             </div>
@@ -200,7 +200,7 @@ const Header = () => {
             </div>
             <Offcanvas direction={'end'} isOpen={isOpen} toggle={toggleOffcanvas}>
                 <OffcanvasHeader toggle={toggleOffcanvas}>
-                    <h3>Your cart({cart.length})</h3>
+                    <h3>Your cart({cart&&cart.length})</h3>
                     <button onClick={()=>toggleOffcanvas()}><i class="fa-solid fa-xmark"></i></button>
                 </OffcanvasHeader>
                 <OffcanvasBody>
@@ -222,7 +222,7 @@ const Header = () => {
                 <div className='checkOut'>
                                 <div className='total'>
                                     <h4>Subtotal</h4>
-                                    <h4 className='total_cost'>${cart.reduce((tong,item)=>item.cost*item.Sl+tong,0)}
+                                    <h4 className='total_cost'>${cart&&cart.reduce((tong,item)=>item.cost*item.Sl+tong,0)}
                             </h4>
                                 </div>
                                 <Link to='/Cart' className='btn_checkout'>Check out</Link>
