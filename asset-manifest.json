@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/frontend/static/css/main.ce6658b3.css",
-    "main.js": "/frontend/static/js/main.b79462fd.js",
+    "main.css": "/frontend/static/css/main.ab3672c9.css",
+    "main.js": "/frontend/static/js/main.0eac381f.js",
     "static/media/avarta.jpg": "/frontend/static/media/avarta.569066fa430ee49ccbf2.jpg",
     "static/media/banner.png": "/frontend/static/media/banner.5bad898c8329ea27e8b3.png",
     "static/media/body_banner.png": "/frontend/static/media/body_banner.97c1bbe55b3c10a8a82c.png",
@@ -9,11 +9,20 @@
     "static/media/img_blog.png": "/frontend/static/media/img_blog.6096ec5a3e293ca68577.png",
     "static/media/map.jpg": "/frontend/static/media/map.b94e2dc9efe019887b8e.jpg",
     "static/media/banner1.png": "/frontend/static/media/banner1.87d0f857938e4bdd9f94.png",
+    "static/media/T-shirt_orange.jpg": "/frontend/static/media/T-shirt_orange.d9020bd1bf431de6344f.jpg",
+    "static/media/images.jpg": "/frontend/static/media/images.bf5828c07a03c9036984.jpg",
+    "static/media/Bag_color.jpg": "/frontend/static/media/Bag_color.17a835d83f4eca1f3b54.jpg",
     "static/media/product.jpg": "/frontend/static/media/product.acaeda722b6b5d7da6fb.jpg",
     "static/media/banner2.png": "/frontend/static/media/banner2.0e09eb462108404cf1bb.png",
     "static/media/Product3.jpg": "/frontend/static/media/Product3.edaba35ed78fb6b29bf1.jpg",
     "static/media/Product2.jpg": "/frontend/static/media/Product2.dff17ebca4aebad57fe9.jpg",
+    "static/media/T-shirt_gray.jpg": "/frontend/static/media/T-shirt_gray.06d8c615109ccc2eef73.jpg",
+    "static/media/hat.jpg": "/frontend/static/media/hat.e319332b83a437b54cc1.jpg",
+    "static/media/Hat_red.jpg": "/frontend/static/media/Hat_red.4a210c84c6cce13bf08e.jpg",
+    "static/media/Belt.jpg": "/frontend/static/media/Belt.264acf7122ae24725b4a.jpg",
     "static/media/Content_banner_productsPage.png": "/frontend/static/media/Content_banner_productsPage.f3e09a8d040b43548f65.png",
+    "static/media/Flag.jpg": "/frontend/static/media/Flag.92c76b0cfc8d89d271d3.jpg",
+    "static/media/Glass.jpg": "/frontend/static/media/Glass.bdc2febc3e9e85c005d1.jpg",
     "static/media/revicons.eot": "/frontend/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/frontend/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/frontend/static/media/revicons.e8746a624ed098489406.woff",
@@ -26,15 +35,16 @@
     "static/media/gird-3.svg": "/frontend/static/media/gird-3.6a51613d5d77f017b109b7217494f6bd.svg",
     "static/media/heard-icon.svg": "/frontend/static/media/heard-icon.d6b4e56498393dd7c657e367b258f044.svg",
     "static/media/envolop.svg": "/frontend/static/media/envolop.e57bb9382e9bb3583da9de9f229b586f.svg",
+    "static/media/return icon.svg": "/frontend/static/media/return icon.35be50f0c44a3bed4fa2949e151d9eee.svg",
     "static/media/List.svg": "/frontend/static/media/List.f25f8f2017939294cc6fab8985c94de3.svg",
     "static/media/user-icon.svg": "/frontend/static/media/user-icon.47834116efaff3fc76eb040fbc6dc9fd.svg",
     "static/media/search-icon.svg": "/frontend/static/media/search-icon.08c99395e7749de79980a16da7e5911c.svg",
     "static/media/search1-icon.svg": "/frontend/static/media/search1-icon.4a01f643eff50700b3de97ec5fac4ff8.svg",
-    "main.ce6658b3.css.map": "/frontend/static/css/main.ce6658b3.css.map",
-    "main.b79462fd.js.map": "/frontend/static/js/main.b79462fd.js.map"
+    "main.ab3672c9.css.map": "/frontend/static/css/main.ab3672c9.css.map",
+    "main.0eac381f.js.map": "/frontend/static/js/main.0eac381f.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce6658b3.css",
-    "static/js/main.b79462fd.js"
+    "static/css/main.ab3672c9.css",
+    "static/js/main.0eac381f.js"
   ]
 }
