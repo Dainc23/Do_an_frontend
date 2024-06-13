@@ -68,10 +68,7 @@ export function AppProvider({ children }) {
 
     const addCart = (id) => {
         const pro = product.find(item => item.id == id)
-        if (!Array.isArray(cart)) {
-            console.error('cart is not an array:', cart);
-            setCart([])
-        }
+        
         const index =(cart&&cart.findIndex(item => item.id == id)) 
         if (index >= 0) {
             const newCart = cart
