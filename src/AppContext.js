@@ -13,7 +13,7 @@ import Tshirt_orange from './Img/Img_products/T-shirt_orange.jpg';
 export const AppContext = createContext({})
 export function AppProvider({ children }) {
     const [product, setProduct] = useState(null)
-    const [cart, serCart] = useState([])
+    const [cart, setCart] = useState([{}])
 
     const imgProducts = [{
         id: 1,
@@ -63,19 +63,23 @@ export function AppProvider({ children }) {
     }
     useEffect(() => {
         getData()
-        serCart(JSON.parse(localStorage.getItem("Cart")))
+        setCart(JSON.parse(localStorage.getItem("Cart")))
     }, [])
 
     const addCart = (id) => {
         const pro = product.find(item => item.id == id)
-        const index = cart.findIndex(item => item.id == id)
+        if (!Array.isArray(cart)) {
+            console.error('cart is not an array:', cart);
+            setCart([])
+        }
+        const index =(cart&&cart.findIndex(item => item.id == id)) 
         if (index >= 0) {
             const newCart = cart
-            newCart[index]['Sl']++
+            newCart&&newCart[index]['Sl']++
             localStorage.setItem("Cart",JSON.stringify([...cart]))
         }
         else {
-            serCart([...cart, { ...pro, Sl: 1 }])
+            setCart([...cart, { ...pro, Sl: 1 }])
             localStorage.setItem("Cart",JSON.stringify([...cart]))
         }
 
@@ -83,11 +87,11 @@ export function AppProvider({ children }) {
     }
 
     const removeByid = (id) => {
-        serCart(cart.filter(item => item.id != id))
+        setCart(cart.filter(item => item.id != id))
         localStorage.setItem("Cart",JSON.stringify(cart.filter(item=>item.id !=id)))
     }
     const updateSl = (id, num) => {
-        serCart(cart.map(item => ((item.id == id) && !(item.Sl == 1 && num == -1)) ? { ...item, Sl: item.Sl + num } : item))
+        setCart(cart.map(item => ((item.id == id) && !(item.Sl == 1 && num == -1)) ? { ...item, Sl: item.Sl + num } : item))
 
     }
     return (
