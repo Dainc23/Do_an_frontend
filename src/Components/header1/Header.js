@@ -61,7 +61,7 @@ const Header = () => {
                         <Navbar >
                             <div className='Brand_menu'>
                                 <Button onClick={toggleSelect} color="link" className='bar'><i class="fa-solid fa-bars-staggered"></i></Button>
-                                <NavbarBrand href="/"><div className='logo'><img alt='logo' src={logo}></img></div></NavbarBrand>
+                                <NavbarBrand href="/frontend"><div className='logo'><img alt='logo' src={logo}></img></div></NavbarBrand>
                                 <Button color="link" className='bar_search'><img alt='icon' src={search1} /></Button>
                                 <Nav className="me-auto" >
                                     <NavItem>
@@ -225,7 +225,7 @@ const Header = () => {
                                     <h4 className='total_cost'>${cart.reduce((tong,item)=>item.cost*item.Sl+tong,0)}
                             </h4>
                                 </div>
-                                <button>Checkout</button>
+                                <Link to='/Cart' className='btn_checkout'>Check out</Link>
                                 <Link>View Cart</Link>
                             </div>
             </Offcanvas>

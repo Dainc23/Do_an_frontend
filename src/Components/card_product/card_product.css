@@ -4,7 +4,8 @@
 }
 .card img{
     width: 100% !important;
-    height: auto;
+    height: 288px;
+    border-radius: 12px;
     
 }
 .quality{

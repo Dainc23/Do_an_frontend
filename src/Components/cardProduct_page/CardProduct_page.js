@@ -19,7 +19,7 @@ const CardProductPage = (pros) => {
                 width: '18rem'
             }}
         >
-            <Link to={`/Products/${ite.id}`}><img alt="Sample" src={img_product} /></Link>
+            <Link to={`/Products/${ite.id}`}><img alt="Sample" src={ite.img} /></Link>
             <div className={ite.status?"status":"statusactive"}>{ite.status}</div>
             <CardBody>
 

@@ -14,11 +14,12 @@ import Testimonial from '../../Components/testimonial_card/Testimonial';
 import BlogCard from '../../Components/blog_card/blog_card';
 import { AppContext } from '../../AppContext';
 import ButtonGroup from '../../Components/customButton_carousel/ButtonGroup';
+import Countdown from 'react-countdown';
 
 
 
 const Home = () => {
-    const { product,cart } = useContext(AppContext)
+    const { product, cart } = useContext(AppContext)
     console.log(product)
     const responsive = {
         superLargeDesktop: {
@@ -67,6 +68,35 @@ const Home = () => {
         }
 
     };
+    const thirtyDaysInMilliseconds = 30 * 24 * 60 * 60 * 1000;
+    const Completionist = () => <span>Discount is over</span>;
+    const renderer = ({ days, hours, minutes, seconds, completed }) => {
+        if (completed) {
+            return <Completionist />;
+        } else {
+            return <span>
+                <div className='coutdown'>
+                    <div className='day'>
+                        <div className='number'><h3>{days}</h3></div>
+                        <p>Day</p>
+                    </div>
+                    <div className='hours'>
+                        <div className='number'><h3>{hours}</h3></div>
+                        <p>Hours</p>
+                    </div>
+                    <div className='minutes'>
+                        <div className='number'><h3>{minutes}</h3></div>
+                        <p>Minutes</p>
+                    </div>
+                    <div className='seconds'>
+                        <div className='number'><h3>{seconds}</h3></div>
+                        <p>Seconds</p>
+                    </div>
+                </div>
+
+            </span>;
+        }
+    };
 
 
     return (
@@ -105,7 +135,7 @@ const Home = () => {
                 <section className='Discover_our_featured_products'>
                     <div className='container'>
                         <h1>Discover our featured products</h1>
-                        
+
 
                         <Carousel responsive={responsive}
                             autoPlaySpeed={5000}
@@ -123,32 +153,19 @@ const Home = () => {
                 <section className='banner_body'>
                     <div className='container'>
                         <h1>Deal of the day upto<br />
+
                             <span className='phantram'>-40% </span> off</h1>
-                        <div className='coutdown'>
-                            <div className='day'>
-                                <div className='number'><h3>05</h3></div>
-                                <p>Day</p>
-                            </div>
-                            <div className='hours'>
-                                <div className='number'><h3>12</h3></div>
-                                <p>Hours</p>
-                            </div>
-                            <div className='minutes'>
-                                <div className='number'><h3>35</h3></div>
-                                <p>Minutes</p>
-                            </div>
-                            <div className='seconds'>
-                                <div className='number'><h3>25</h3></div>
-                                <p>Seconds</p>
-                            </div>
-                        </div>
+                        <Countdown date={Date.now() + thirtyDaysInMilliseconds}
+                            renderer={renderer}
+                        />,
+
                         <Button >Shop now</Button>
                     </div>
                 </section>
                 <section className='Clientloveus_welovethem'>
                     <div className='container'>
                         <h1>Client love us & we love them</h1>
-                        
+
                         <Carousel
                             responsive={responsive1}
                             showDots={true}

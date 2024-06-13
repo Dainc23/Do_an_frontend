@@ -841,7 +841,7 @@
     font-size: 16px;
     font-family: var(--font-family);
 }
-.checkOut button{
+.checkOut .btn_checkout{
     width: 100%;
     text-align: center;
     padding: 12px 24px;
@@ -853,6 +853,11 @@
     color: #ffff;
     margin-top: 20px;
     margin-bottom: 15px;
+    font-weight: 400;
+}
+.checkOut{
+    display: flex;
+    flex-direction: column;
 }
 .checkOut a{
     text-decoration: none;

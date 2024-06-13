@@ -1,0 +1,327 @@
+main{
+   margin-top: 180px; 
+   margin-bottom: 100px;
+}
+.productPageCart{
+    display: flex;
+}
+.productPageCart img{
+    width: 80px;
+    height: 100px;
+    border-radius: 4px;
+    
+}
+.anhVaten img{
+    width: 80px;
+    height: 100px;
+}
+.anhVaten{
+    display: flex;
+    align-items: center;
+}
+.button_linkShopping{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.step_shopping{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-top: 60px;
+}
+.step_shopping .step_1,.step_shopping .step_2,.step_shopping .step_3{
+    display: flex;
+    align-items: center;
+}
+.step_shopping .number_step{
+    width: 30px;
+    height: 30px;
+    background: #213549;
+    color: #ffff;
+    border-radius: 99px;
+    font-family: var(--font-family);
+    text-align: center;
+    line-height: 30px;
+    margin-right: 10px;
+    font-weight: 600;
+}
+.step_shopping .step_1,.step_shopping .step_2{
+    margin-right: 20px;
+}
+.line_step{
+    width: 30px;
+    height: 1px;
+    background: #D9D9D9;
+}
+.step_shopping .step_2{
+    margin-left: 20px;
+}
+.step_shopping .name_step{
+    font-family: var(--font-family);
+    font-size: 18px;
+    color: #213549;
+    font-weight: 600;
+}
+.step_shopping .step_2,.step_shopping .step_3{
+    opacity: 0.5;
+}
+.step_shopping .step_3{
+    margin-left: 20px;
+}
+.Cart_Total{
+    width: 520px;
+    border: #213549 1px solid;
+    height: 619px;
+}
+.content_cart{
+    display: flex;
+    justify-content: space-between;
+}
+.Shopping_Cart{
+    margin-top: 80px;
+}
+.Shopping_Cart .banner_discount{
+    display: flex;
+    align-items: center;
+    background: #F5FAFE;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    justify-content: space-between;
+}
+.Shopping_Cart .banner_discount img{
+    margin-right: 10px;
+}
+.cart_detail{
+    width: 60%;
+    margin-top: 50px;
+}
+.Shopping_Cart h1{
+    font-family: var(--font-family);
+    font-size: 40px;
+    font-weight: bold;
+    color: #213549;
+}
+.table th{
+    font-family: var(--font-family);
+    font-size: 16px;
+    color: #213549;
+    padding-bottom: 20px;
+    
+}
+.table tbody th{
+    padding: 25px 0px 25px 0px;
+    display: flex;
+    align-items: center;
+}
+.table tbody td{
+    padding: 50px 0px 50px 0px;
+    text-align: center;
+    align-items: center;
+}
+.update_number{
+    display: flex;
+    background: #f1efef;
+    width: 100px;
+    padding: 4px;
+    align-items: center;
+    border-radius: 7px;
+}
+.update_number button{
+    background: none;
+    border: none;
+    color: #213549;
+    font-family: var(--font-family);
+}
+.update_number button:hover{
+    background: none;
+    color: #213549;
+    
+}
+.update_number p{
+    font-family: var(--font-family);
+    font-size: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    
+    color: #213549;
+}
+.update_number button:active{
+    background: #e0dede !important;
+    color: #213549 !important;
+}
+.anhVaten .ten{
+    margin-left: 30px;
+}
+.anhVaten .ten p{
+    font-family: var(--font-family);
+    font-weight: 400;
+}
+.anhVaten .ten .infor_size{
+    opacity: 0.8;
+}
+.anhVaten img{
+    border-radius: 7px;
+}
+.remove{
+    background: none;
+    border: none;
+}
+.remove i{
+    color: #718497;
+}
+.remove:hover{
+    background:none;
+}
+.remove:hover i{
+    color: #213549;
+}
+.remove:active{
+    background:none !important;
+}
+.button_linkShopping a{
+    text-decoration: none;
+}
+.button_linkShopping .ask img{
+    margin-right: 8px;
+}
+.button_linkShopping .ask{
+    display: flex;
+    align-items: center;
+    color: #213549;
+    font-family: var(--font-family);
+}
+.button_linkShopping .continue{
+    color: #213549;
+    font-family: var(--font-family);
+    
+    
+}
+.button_linkShopping{
+    margin-top: 30px;
+}
+.button_linkShopping .continue i{
+    font-size: 14px;
+    margin-left: 6px;
+}
+.subTotal{
+    width: 50px;
+}
+.subTotal p{
+    line-height: 40px;
+    font-family: var(--font-family);
+    font-weight: bold;
+    color: #213549;
+}
+.content_discount{
+    display: flex;
+    align-items: center;
+}
+.content_discount img{
+    height: 18px;
+}
+.banner_discount button{
+    background: #ffff;
+    border: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 7px;
+}
+.banner_discount button i{
+    font-size: 14px;
+}
+.banner_discount p{
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 400;
+}
+.Cart_Total{
+    width: 35%;
+    border: 1px #E2E8EE solid;
+    border-radius: 15px;
+    padding: 45px 28px 30px 28px;
+}
+.first_cost .row_cost{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.first_cost{
+    padding-bottom: 20px;
+    border-bottom:1px #E2E8EE solid  ;
+}
+.Cart_Total h3{
+    font-family: var(--font-family);
+    font-size: 18px;
+}
+.row_cost p{
+    font-family: var(--font-family);
+    font-size: 16px;
+}
+.row_cost{
+    margin-bottom: 10px;
+}
+.second_cost .box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.second_cost .box input{
+    margin-right: 5px;
+}
+.second_cost{
+    margin-top: 24px;
+}
+.second_cost .box label,.second_cost .box p{
+    font-family: var(--font-family);
+    font-size: 16px;
+}
+.second_cost .box p{
+    opacity: 0.5;
+}
+.select_discount{
+    width: 100% !important;
+    margin-bottom: 20px;
+    height: 50px;
+    border-radius: 7px;
+    margin-top: 20px;
+}
+select option{
+    font-family: var(--font-family);
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+.total p{
+    font-family: var(--font-family);
+    font-size: 19px;
+    font-weight: 600;
+}
+.btn_procees{
+    text-align: center;
+    background: #213549;
+    width: 100%;
+    padding:11px 0px ;
+    display: inline-block;
+    text-decoration: none;
+    color: #ffff;
+    font-family: var(--font-family);
+    font-weight: 400;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+.cachThanhtoan p{
+    font-family: var(--font-family);
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+.cachThanhtoan .diachiThanhtoan img{
+    width: 38px;
+    margin-right: 10px;
+}

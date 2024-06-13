@@ -8,7 +8,7 @@ import { AppContext } from '../../AppContext';
 const CardProduct = (pros) => {
 
     const{ite}=pros;
-    const{product,addCart,cart}=useContext(AppContext)
+    const{addCart}=useContext(AppContext)
 
     return (
         <div className='col-xl-3 col-lg-4 col-md-6 col-6'>
@@ -21,7 +21,7 @@ const CardProduct = (pros) => {
                     width: '18rem'
                 }}
             >
-                <Link to={`/Products/${ite.id}`}><img alt="Sample" src={img_product} /></Link>
+                <Link to={`/Products/${ite.id}`}><img alt="Sample" src={ite.img} /></Link>
                 <div className={ite.status?"status":"statusactive"}>{ite.status}</div>
                 <CardBody>
 

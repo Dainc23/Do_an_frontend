@@ -7,7 +7,7 @@ const ProductCart = (pros) => {
     const { removeByid, updateSl } = useContext(AppContext)
     return (
         <div className='product_cart'>
-            <img src={img_product}></img>
+            <img src={ite.img}></img>
             <div className='name_product_Addnumberproduct'>
                 <div className='name_productAnd'>
                     <h4>{ite.name}</h4>

@@ -8,6 +8,7 @@ import Product_detail from './Pages/product_detail/Product_detail';
 import Products from './Pages/products/Products';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css'
+import ShoppingCart from './Pages/shopping_cart/Shopping_cart';
 
 
 
@@ -26,6 +27,7 @@ const App = () => {
                         <Route path='/*' element={<About_us />} />
                         <Route path='/Products' element={<Products />} />
                         <Route path="/Products/:id" element={<Product_detail />} />
+                        <Route path='/Cart' element={<ShoppingCart />} />
                         
                     </Routes>
 
