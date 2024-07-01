@@ -16,7 +16,7 @@ import applePay from '../../Img/PhuongThucThanhToan/applePay.jpg'
 import googlePay from '../../Img/PhuongThucThanhToan/googlePay.png'
 import jcb from '../../Img/PhuongThucThanhToan/JCB.jpg'
 const ShoppingCart = () => {
-    const { cart } = useContext(AppContext)
+    const { cart,updateSl } = useContext(AppContext)
     return (
         <div>
             <Header />
@@ -82,10 +82,10 @@ const ShoppingCart = () => {
 
                                             <td>
                                                 <div className='update_number'>
-                                                    <Button ><i class="fa-solid fa-minus"></i></Button>
-                                                    <p>1</p>
+                                                    <Button onClick={updateSl(item.id,-1)}><i class="fa-solid fa-minus"></i></Button>
+                                                    <p>{item.Sl}</p>
 
-                                                    <Button ><i class="fa-solid fa-plus"></i></Button>
+                                                    <Button onClick={updateSl(item.id,1)} ><i class="fa-solid fa-plus"></i></Button>
                                                 </div>
 
                                             </td>

@@ -62,23 +62,26 @@ export function AppProvider({ children }) {
             })
     }
     useEffect(() => {
+        
         getData()
-        setCart(JSON.parse(localStorage.getItem("Cart")))
+        setCart(JSON.parse(localStorage.getItem("Cart")) || [])
+
     }, [])
 
     const addCart = (id) => {
-        const pro = product.find(item => item.id == id)
-        
+        const pro = product.find(item => item.id == id) 
         const index =(cart&&cart.findIndex(item => item.id == id)) 
-        if (index >= 0) {
+        if (index > 0) {
+            
             const newCart = cart
-            newCart&&newCart[index]['Sl']++
-            localStorage.setItem("Cart",JSON.stringify([...cart]))
+            newCart[index]['Sl']++
+            localStorage.setItem("Cart",JSON.stringify([...newCart]))
         }
         else {
             setCart([...cart, { ...pro, Sl: 1 }])
             localStorage.setItem("Cart",JSON.stringify([...cart]))
         }
+        
 
         console.log(cart)
     }
